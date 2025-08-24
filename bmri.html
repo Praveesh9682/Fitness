@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Free BMI, BMR & Body Fat Calculator Online | FitnessIsGame</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Use our free BMI, BMR, and Body Fat Percentage calculators to track your fitness, calculate calories, and improve your health goals. Simple, accurate, and quick." />
+  <meta name="keywords" content="BMI calculator, BMR calculator, Body Fat calculator, fitness calculator, calorie calculator, weight loss, health tools, FitnessIsGame" />
+  <meta name="author" content="FitnessIsGame" />
+
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="Free BMI, BMR & Body Fat Calculator | FitnessIsGame" />
+  <meta property="og:description" content="Track your fitness with our free BMI, BMR, and Body Fat calculators. Easy-to-use online tools for health and weight management." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:image" content="https://yourwebsite.com/fitness-calculator-thumbnail.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free BMI, BMR & Body Fat Calculator | FitnessIsGame" />
+  <meta name="twitter:description" content="Calculate BMI, BMR, and Body Fat % instantly with our free online fitness tools." />
+  <meta name="twitter:image" content="https://fitnessIsGame.vercel.app/fitness-calculator-thumbnail.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Fitness Calculators - BMI, BMR, Body Fat",
+    "url": "https://yourwebsite.com",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "description": "Free online calculators for BMI, BMR, and Body Fat percentage to help users achieve their fitness goals.",
+    "creator": {
+      "@type": "Organization",
+      "name": "FitnessIsGame"
+    }
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script src="fitness.js"></script>
+
+  <!-- Styles -->
+  <style>
+    @import url("web.css");
+    @import url("responsive.css");
+  </style>
+</head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="nav" class="nav1">
+      <img src="logo1.jpg" alt="sorry" width="135px" height="57px" />
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="bmri.html">CALCULATORS</a></li>
+        <li><a href="exercise.html">EXERCISE</a></li>
+        <li><a href="diet.html">DIET PLAN</a></li>
+        <li><a href="https://fitindiahai.blogspot.com/">BLOG</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="privacy.html">PRIVACY</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="burger" onclick="myFunction()">
+      <i class="fa fa-bars">☰</i>
+    </a>
+
+    <div class="bmri">
+      <!-- BMI Calculator -->
+      <div class="bmi">
+        <div class="first">
+          <h1>Check Your BMI</h1>
+          <label for="h">Height (in cm)</label>
+          <input type="text" id="h" placeholder="Enter Your Height (cm)" />
+          <label for="w">Weight (in kg)</label>
+          <input type="text" id="w" placeholder="Enter Your Weight (kg)" />
+        </div>
+        <div class="ctn">
+          <button class="bmib" type="button" onclick="bmi()">Calculate</button>
+          <button class="bmic" type="button" onclick="cbmi()">Clear</button>
+        </div>
+        <h2>
+          BMI = <b id="bmi_calc"></b> kg/m²
+        </h2>
+        <h3 id="bmi_cal"></h3>
+        <h3>Tips:</h3>
+        <ol>
+          <li>BMI means Body Mass Index.</li>
+          <li>It tells your body weight (in kg/m²).</li>
+          <li>Normal BMI range is 18.5–24.9</li>
+          <li>
+            If your BMI is out of normal range then check your BMR and proceed
+            accordingly.
+          </li>
+        </ol>
+      </div>
+
+      <!-- BMR Calculator -->
+      <div class="bmr">
+        <div class="second">
+          <h1>Check Your BMR <br>(how much you eat daily)</h1>
+          <input type="text" id="bh" placeholder="Enter Your Height (cm)" />
+          <input type="text" id="bw" placeholder="Enter Your Weight (kg)" />
+          <input type="text" id="a" placeholder="Enter Your Age" />
+        </div>
+        <div class="ctn">
+          <button class="bmib" type="button" onclick="bmr()">Calculate</button>
+          <button class="bmic" type="button" onclick="cbmr()">Clear</button>
+        </div>
+        <h2>
+          BMR = <b id="bmr_calc"></b> calories. <b id="bmr_cal"></b>
+        </h2>
+        <h3>Tips:</h3>
+        <ol>
+          <li>
+            If you want to lose extra weight (fat), you have to cut 500 calories
+            from daily calories.
+          </li>
+          <li>
+            If you want to maintain your weight, you have to consume your daily
+            calories.
+          </li>
+          <li>
+            If you want to gain weight, you have to add 500 calories in daily
+            calories.
+          </li>
+          <li>
+            500 calories are natural calories to gain/lose weight. These
+            calories increase/decrease 1 pound weight in a week.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Body Fat Calculator -->
+      <div class="fat">
+        <h1>Check Your Body Fat %</h1>
+        <div class="gender">
+          Gender
+          <input type="radio" name="gender" id="gender1" value="1" />
+          <label for="gender1">Male</label>
+          <input type="radio" name="gender" id="gender2" value="2" />
+          <label for="gender2">Female</label>
+        </div>
+        <table class="tabf">
+          <tr>
+            <td>Age</td>
+            <td>
+              <input type="text" id="fa" placeholder="Enter Your Age" />
+            </td>
+          </tr>
+          <tr>
+            <td>BMI</td>
+            <td>
+              <input type="text" id="fbmi" placeholder="Enter Your BMI" />
+            </td>
+          </tr>
+          <tr>
+            <td>Weight (kg)</td>
+            <td>
+              <input type="text" id="fw" placeholder="Enter Your Weight" />
+            </td>
+          </tr>
+        </table>
+        <div class="ctn">
+          <button class="bmib" type="button" onclick="fat()">Calculate</button>
+          <button class="bmic" type="button" onclick="cfat()">Clear</button>
+        </div>
+        <h2>
+          FAT (%) = <b id="fat_calc"></b> <b id="fat_cal"></b><br />
+          FAT (kg) = <b id="fats_cal"></b>
+        </h2>
+        <h4>ACCEPTABLE BODY FAT PERCENTAGE (%)</h4>
+        <table class="description" border="2">
+          <thead>
+            <tr>
+              <td>DESCRIPTION</td>
+              <td>MALE</td>
+              <td>FEMALE</td>
+            </tr>
+          </thead>
+          <tr>
+            <td>Essential Fat</td>
+            <td>2-4%</td>
+            <td>10-12%</td>
+          </tr>
+          <tr>
+            <td>Athletes</td>
+            <td>6-13%</td>
+            <td>14-20%</td>
+          </tr>
+          <tr>
+            <td>Fitness</td>
+            <td>14-17%</td>
+            <td>21-24%</td>
+          </tr>
+          <tr>
+            <td>Acceptable</td>
+            <td>18-25%</td>
+            <td>25-30%</td>
+          </tr>
+          <tr>
+            <td>Obese</td>
+            <td>26%+</td>
+            <td>31%+</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="foot">
+      Copyright © 2025 FitnessIsGame.Com All rights | reserved.
+    </footer>
+    <script src="fitness.js"></script>
+  </body>
+</html>

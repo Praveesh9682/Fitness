@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitnessIsGame - Diet Plan</title>
+  <style>
+    @import url("web.css");
+    @import url("responsive.css");
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 70%;
+      margin: auto;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    tr[data-food] {
+      cursor: pointer;
+      background: #f9f9f9;
+    }
+    tr[data-food]:hover {
+      background: #dfefff;
+    }
+
+    #selectedTable {
+      margin-top: 30px;
+      width: 60%;
+    }
+
+    button {
+      margin: 20px auto;
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <nav id="nav" class="nav1">
+    <img src="logo1.jpg" alt="sorry" width="135px" height="57px"/>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="bmri.html">CALCULATORS</a></li>
+      <li><a href="exercise.html">EXERCISE</a></li>
+      <li><a href="diet.html">DIET PLAN</a></li>
+      <li><a href="https://fitindiahai.blogspot.com/">BLOG</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="privacy.html">PRIVACY</a></li>
+    </ul>
+  </nav>
+ <a href="#" class="burger" onclick="myFunction()">
+      <i class="fa fa-bars">☰</i>
+    </a>
+  <!-- <h1>Create your personalized diet plan by selecting these items, designed according to your BMR</h1> -->
+<h1 style="
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ff6b6b, #4dff88, #1e90ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientBounce 3s ease infinite, bounce 2s ease-in-out infinite;
+">
+Create your personalized diet plan by selecting these items, designed according to your BMR
+</h1>
+
+<style>
+@keyframes gradientBounce {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+</style>
+  <section class="diet">
+    <div class="tab">
+      <table border="1" id="dietTable">
+        <tr id="title">
+          <th>No.</th>
+          <th>Food Name</th>
+          <th>Quantity (g/ml)</th>
+          <th>Protein (g)</th>
+          <th>Fat (g)</th>
+          <th>Carbs (g)</th>
+          <th>Calories</th>
+        </tr>
+        <!-- Original 16 items -->
+        <tr data-food="roti"><td>1</td><td>Roti (bread)</td><td>1 (piece)</td><td>4</td><td>2</td><td>20</td><td>98</td></tr>
+        <tr data-food="rice"><td>2</td><td>Rice</td><td>60</td><td>4</td><td>0</td><td>48</td><td>219</td></tr>
+        <tr data-food="daal"><td>3</td><td>Daal</td><td>30</td><td>7</td><td>0</td><td>18</td><td>104</td></tr>
+        <tr data-food="milk"><td>4</td><td>Milk</td><td>300 (ml)</td><td>9</td><td>9</td><td>14</td><td>183</td></tr>
+        <tr data-food="paneer"><td>5</td><td>Paneer</td><td>100</td><td>18</td><td>30</td><td>2</td><td>352</td></tr>
+        <tr data-food="daliya"><td>6</td><td>Daliya</td><td>50</td><td>6</td><td>1</td><td>36</td><td>184</td></tr>
+        <tr data-food="curd"><td>7</td><td>Curd</td><td>100</td><td>3</td><td>3</td><td>4</td><td>75</td></tr>
+        <tr data-food="sprouts"><td>8</td><td>Sprouts</td><td>30</td><td>7</td><td>0</td><td>18</td><td>104</td></tr>
+        <tr data-food="banana"><td>9</td><td>Banana</td><td>1 (piece)</td><td>0</td><td>0</td><td>22</td><td>90</td></tr>
+        <tr data-food="chia"><td>10</td><td>Chia seeds</td><td>15</td><td>3</td><td>4</td><td>6</td><td>55</td></tr>
+        <tr data-food="chickpeas"><td>11</td><td>Chickpeas</td><td>100</td><td>20</td><td>6</td><td>61</td><td>364</td></tr>
+        <tr data-food="soya"><td>12</td><td>Soya chunks</td><td>100</td><td>52</td><td>1</td><td>33</td><td>345</td></tr>
+        <tr data-food="egg"><td>13</td><td>Egg</td><td>1 (piece)</td><td>6</td><td>5</td><td>1</td><td>74</td></tr>
+        <tr data-food="chicken"><td>14</td><td>Chicken Breast</td><td>100</td><td>23</td><td>1</td><td>0</td><td>110</td></tr>
+        <tr data-food="fish"><td>15</td><td>Fish</td><td>100</td><td>20</td><td>1.7</td><td>0</td><td>96</td></tr>
+        <tr data-food="whey"><td>16</td><td>Whey</td><td>1 Scoop</td><td>25</td><td>0</td><td>0</td><td>120</td></tr>
+
+        <!-- 10 Extra Items -->
+        <tr data-food="oats"><td>17</td><td>Oats</td><td>40</td><td>5</td><td>3</td><td>27</td><td>150</td></tr>
+        <tr data-food="almonds"><td>18</td><td>Almonds</td><td>28</td><td>6</td><td>14</td><td>6</td><td>160</td></tr>
+        <tr data-food="tofu"><td>19</td><td>Tofu</td><td>100</td><td>8</td><td>4</td><td>2</td><td>94</td></tr>
+        <tr data-food="mutton"><td>20</td><td>Mutton (lean)</td><td>100</td><td>25</td><td>9</td><td>0</td><td>250</td></tr>
+        <tr data-food="prawns"><td>21</td><td>Prawns</td><td>100</td><td>24</td><td>0.5</td><td>0</td><td>99</td></tr>
+        <tr data-food="apple"><td>22</td><td>Apple</td><td>150</td><td>0</td><td>0</td><td>20</td><td>80</td></tr>
+        <tr data-food="walnuts"><td>23</td><td>Walnuts</td><td>30</td><td>5</td><td>20</td><td>5</td><td>200</td></tr>
+        <tr data-food="sweetpotato"><td>24</td><td>Sweet Potato</td><td>100</td><td>2</td><td>0</td><td>24</td><td>105</td></tr>
+        <tr data-food="broccoli"><td>25</td><td>Broccoli</td><td>100</td><td>3</td><td>0</td><td>7</td><td>34</td></tr>
+        <tr data-food="peas"><td>26</td><td>Green Peas</td><td>100</td><td>5</td><td>0</td><td>14</td><td>84</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="below">
+    <h2 style="text-align:center;">Your Selected Diet Plan</h2>
+    <table id="selectedTable">
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Protein</th>
+        <th>Fat</th>
+        <th>Carbs</th>
+        <th>Calories</th>
+      </tr>
+    </table>
+    <h3 style="text-align:center;" id="totals"></h3>
+    <button onclick="downloadDietPDF()">Download Diet Plan</button>
+  </section>
+
+  <footer class="foot">
+    Copyright © 2025 FitnessIsGame.com All rights | reserved.
+  </footer>
+
+  <!-- jsPDF -->
+   <script src="fitness.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    // Create baseData dynamically from table
+    const baseData = {};
+    document.querySelectorAll("#dietTable tr[data-food]").forEach(row => {
+      const tds = row.querySelectorAll("td");
+      const key = row.getAttribute("data-food");
+      baseData[key] = {
+        unit: tds[2].textContent.includes("ml") ? "ml" :
+              tds[2].textContent.includes("piece") ? "piece" : "g",
+        qty: parseFloat(tds[2].textContent), // base qty
+        protein: parseFloat(tds[3].textContent),
+        fat: parseFloat(tds[4].textContent),
+        carbs: parseFloat(tds[5].textContent),
+        calories: parseFloat(tds[6].textContent)
+      };
+    });
+
+    const selectedItems = [];
+    const selectedTable = document.getElementById("selectedTable");
+    const totalsEl = document.getElementById("totals");
+
+    // Click event for table
+    document.querySelectorAll("#dietTable tr[data-food]").forEach(row => {
+      row.addEventListener("click", () => {
+        const key = row.getAttribute("data-food");
+        const food = baseData[key];
+
+        let qty = prompt(`Enter quantity for ${key} in ${food.unit} (base = ${food.qty} ${food.unit}):`);
+        if (!qty || isNaN(qty)) return;
+        qty = parseFloat(qty);
+
+        // Ratio calculation
+        const factor = qty / food.qty;
+        const protein = (food.protein * factor).toFixed(2);
+        const fat = (food.fat * factor).toFixed(2);
+        const carbs = (food.carbs * factor).toFixed(2);
+        const calories = (food.calories * factor).toFixed(2);
+
+        selectedItems.push({ name:key, qty: qty + " " + food.unit, protein, fat, carbs, calories });
+        updateSelectedTable();
+      });
+    });
+
+    function updateSelectedTable() {
+      selectedTable.innerHTML = `
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Protein</th>
+          <th>Fat</th>
+          <th>Carbs</th>
+          <th>Calories</th>
+        </tr>
+      `;
+
+      let totalP=0,totalF=0,totalC=0,totalCal=0;
+      selectedItems.forEach(item => {
+        totalP += parseFloat(item.protein);
+        totalF += parseFloat(item.fat);
+        totalC += parseFloat(item.carbs);
+        totalCal += parseFloat(item.calories);
+
+        selectedTable.innerHTML += `
+          <tr>
+            <td>${item.name}</td>
+            <td>${item.qty}</td>
+            <td>${item.protein}</td>
+            <td>${item.fat}</td>
+            <td>${item.carbs}</td>
+            <td>${item.calories}</td>
+          </tr>
+        `;
+      });
+
+      totalsEl.innerHTML = `TOTAL ➝ Protein: ${totalP.toFixed(2)} g | Fat: ${totalF.toFixed(2)} g | Carbs: ${totalC.toFixed(2)} g | Calories: ${totalCal.toFixed(2)}`;
+    }
+    
+    function downloadDietPDF() {
+    if (selectedItems.length === 0) {
+      alert("No items selected!");
+      return;
+    }
+
+    // 1. Ask user details
+    const gender = prompt("Enter your gender (male/female):")?.toLowerCase();
+    const height = parseFloat(prompt("Enter your height in cm:"));
+    const weight = parseFloat(prompt("Enter your weight in kg:"));
+    const age = parseInt(prompt("Enter your age in years:"));
+
+    if (!gender || !height || !weight || !age) {
+      alert("Please provide all details!");
+      return;
+    }
+
+    // 2. Calculate BMI
+    const bmi = weight / ((height / 100) ** 2);
+
+    // 3. Calculate BMR (Mifflin-St Jeor)
+    let bmr = 0;
+    // if (gender === "male") {
+    //   bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    // } else {
+    //   bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+    // }
+    bmr=66.47+13.75*weight+5*height-6.8*age ;
+
+    // 4. Estimate Body Fat % (Deurenberg formula)
+    const bf = 1.20 * bmi + 0.23 * age - (10.8 * (gender === "male" ? 1 : 0)) - 5.4;
+
+    // 5. Analyze fitness category
+    let analysis = "";
+    let recommendedCalories = bmr;
+
+    if (bmi < 18.5) {
+      analysis = "You are underweight. We recommend increasing calories by ~500 above your BMR.";
+      recommendedCalories += 500;
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      analysis = "You are fit! Maintain your diet according to your BMR.";
+    } else {
+      analysis = "You are overweight. We recommend reducing calories by ~500 below your BMR.";
+      recommendedCalories -= 500;
+    }
+
+    // 6. Calculate totals from selected items
+    let totalP = 0, totalF = 0, totalC = 0, totalCal = 0;
+    selectedItems.forEach(item => {
+      totalP += parseFloat(item.protein);
+      totalF += parseFloat(item.fat);
+      totalC += parseFloat(item.carbs);
+      totalCal += parseFloat(item.calories);
+    });
+
+    // 7. Macro % contribution
+    const pCal = totalP * 4;
+    const fCal = totalF * 9;
+    const cCal = totalC * 4;
+    const proteinPct = ((pCal / totalCal) * 100).toFixed(1);
+    const fatPct = ((fCal / totalCal) * 100).toFixed(1);
+    const carbPct = ((cCal / totalCal) * 100).toFixed(1);
+
+    // 8. Generate PDF
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF("p", "mm", "a4");
+
+    // Title
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(20);
+    doc.setTextColor(40, 70, 150);
+    doc.text(" Your Custom Diet Plan", 105, 20, { align: "center" });
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(12);
+    doc.setTextColor(80, 80, 80);
+    doc.text("Created with FitnessIsGame Diet Planner", 105, 28, { align: "center" });
+
+    // Line break
+    doc.setDrawColor(180);
+    doc.line(20, 35, 190, 35);
+
+    // Add User Stats
+    let y = 45;
+    doc.setFontSize(12);
+    doc.setFont("helvetica", "bold");
+    doc.text("User Profile & Health Stats:", 20, y);
+    y += 8;
+    doc.setFont("helvetica", "normal");
+    doc.text(`Gender: ${gender}`, 25, y); y+=6;
+    doc.text(`Height: ${height} cm | Weight: ${weight} kg | Age: ${age}`, 25, y); y+=6;
+    doc.text(`BMI: ${bmi.toFixed(1)} | BMR: ${bmr.toFixed(0)} kcal/day | Body Fat: ${bf.toFixed(1)}%`, 25, y);
+
+    y += 12;
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(0, 119, 204);
+    doc.text("Diet Plan:", 20, y);
+
+    // Table Header
+    y += 8;
+    doc.setFont("helvetica", "bold");
+    doc.setFillColor(0, 119, 204);
+    doc.setTextColor(255, 255, 255);
+    doc.rect(20, y - 6, 170, 8, "F");
+    doc.text("Food", 25, y);
+    doc.text("Qty", 65, y);
+    doc.text("Protein", 95, y);
+    doc.text("Fat", 120, y);
+    doc.text("Carbs ", 140, y);
+    doc.text("Calories", 170, y, { align: "right" });
+
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(50, 50, 50);
+    y += 10;
+
+    selectedItems.forEach(item => {
+      if (y > 270) { doc.addPage(); y = 20; }
+      doc.text(item.name, 25, y);
+      doc.text(item.qty.toString(), 65, y);
+      doc.text(item.protein.toString(), 100, y, { align: "right" });
+      doc.text(item.fat.toString(), 125, y, { align: "right" });
+      doc.text(item.carbs.toString(), 150, y, { align: "right" });
+      doc.text(item.calories.toString(), 185, y, { align: "right" });
+      y += 10;
+    });
+
+    // Totals
+    y += 10;
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(0, 119, 204);
+    doc.text("TOTAL NUTRITION:", 25, y);
+    y+=8;
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(0,0,0);
+    doc.text(
+  `Protein: ${totalP.toFixed(2)} g | Fat: ${totalF.toFixed(2)} g | Carbs: ${totalC.toFixed(2)} g | Calories: ${totalCal.toFixed(2)}`, 
+  25, 
+  y
+);
+
+
+
+// Macro % breakdown
+
+    y+=10;
+    doc.setFont("helvetica", "bold");
+    doc.text("Macro Calorie %:", 25, y);
+    y+=8;
+    doc.setFont("helvetica", "normal");
+    doc.text(`Protein: ${proteinPct}% | Fat: ${fatPct}% | Carbs: ${carbPct}%`, 25, y);
+// Move down a bit for the next line (e.g., +10 pixels)
+y += 10;
+
+doc.text(
+  `  Note: An ideal macro split is about 30% protein, 45% carbs, and 25% healthy fats.`, 
+  20, 
+  y
+);
+    // Analysis
+    y+=12;
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(0,119,204);
+    doc.text("Analysis & Recommendation:", 25, y);
+    y+=8;
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(0,0,0);
+    doc.text(analysis, 25, y, { maxWidth: 160 });
+    y+=12;
+    doc.text(`Recommended Calories: ${recommendedCalories.toFixed(0)} kcal/day`, 25, y);
+    y += 10;
+
+doc.text(
+  `  Note: Your total calories should be near ${recommendedCalories.toFixed(0)} calories`, 
+  20, 
+  y
+);
+
+    // Footer
+    doc.setFontSize(10);
+    doc.setTextColor(100);
+    doc.text("Generated by FitnessIsGame.Com", 105, 285, { align: "center" });
+
+    doc.save("DietPlan.pdf");
+  }
+
+  </script>
+  
+</body>
+</html>

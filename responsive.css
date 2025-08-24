@@ -1,0 +1,518 @@
+/* Media queries */
+/* big landscape(bend) tablets ,laptop and desktop */
+
+@media(min-width:1172px){
+  .bmri h1{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+  
+  }
+}
+@media(max-width:1172px){
+a{
+    font-size: 15px;
+}
+#nav ul li{
+margin-top: 10px;
+}
+#nav img{
+  width: 73px;
+height: 30px;
+margin-top: 10px;
+}
+.photo{
+  width: 7rem;
+  height: 10rem;
+}
+.photo:hover{
+  width: 7rem;
+  height: 10rem;
+}
+.mix h1{
+  width: 612px;
+    height: 112px;
+    font-size: 38px;
+    text-align: left;
+
+}
+#content{
+  font-size: 27px;
+  width: 100%;
+  height: 28px;
+  margin-top: 120px;
+}
+.mix{
+display: flex;
+justify-content: center;
+}
+/* }footer responsive */
+.foot{
+  font-size: 30px;
+}
+/* resposive about us page */
+.about section{
+    font-size: 14px;
+   }
+/* responsive calculator */
+.bmri{
+  flex-direction: column;
+
+}
+.bmi{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.bmr{
+  width: 60%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.fat{
+  width: 60%;
+  margin: auto;
+}
+/* Responsive Exercise */
+.cardio ol{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* responsive contact */
+.container h3{
+  font-size: 14px;
+}
+
+/* landscape tablets, low resolution laptop and desktop */
+@media(max-width:890px){
+  .nav1 ul li{
+    font-size: 20px;
+    align-items: left;
+  }
+  #content{
+    font-size: 23px;
+      width: 100%;
+      /* height: 28px; */
+      margin-top: 181px;
+  }
+  .photo{
+    width: 7rem;
+    height: 10rem;
+  }
+  .photo:hover{
+    width: 7rem;
+    height: 10rem;
+  }
+    #nav ul{
+        flex-direction: column;
+      height: 100%;  
+    }
+    .nav1 ul{
+      display: none;
+    }
+  a.burger{
+    display: flex;
+  }
+  .nav1.responsive ul{
+    transition: 4s;
+display: block;
+height: 300px;
+  }
+  .mix{
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    }
+    .mid h1{
+      width: 94%;
+      font-size: 30px;
+      margin:inherit;
+    }
+    span::before{
+      margin-left: -245px;
+    }
+/* resposive about us page */ */
+/* .about section{ */
+  /* width: 760px; */
+/* } */
+ 
+.unorder{
+  font-size: 20px;
+  margin: 0px;
+}
+.s ul{
+  margin: 0px;
+}
+.order{
+  font-size: 20px;
+} 
+/* responsive calculator */
+.bmi{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.bmr{
+  width: 70%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.fat{
+  width: 70%;
+  margin: auto;
+}
+/* responsive diet plan */
+/* .tab{
+  width: 80%;
+} */
+.diet{
+  font-size: 14px;
+ }
+}
+@media(max-width:800px){
+   .foot{
+     font-size: 22px;
+   }
+   /* responsive diet plan */
+   #title{
+    font-size: 13px;
+   }
+   .diet {
+    font-size: 13px;
+   }
+   /* .tab{
+     width:80%;
+   } */
+   .about section{
+    font-size: 13px;
+    /* width: 570px; */
+   }
+   
+}
+/* smart phones, android phones,landscape iphone */
+@media(max-width:600px){
+  .mix h1{
+    font-size: 18px;
+  }
+  #content{
+    width: revert;
+    overflow: visible;
+  font-size: 15px;
+  margin-top: 153px;
+  }
+  #selectedTable {
+    width: 40%;
+  }
+  span::before{
+    margin-left: -245px;
+  }
+  .foot{
+    font-size: 17px;
+  }
+  /* responsive about page */
+  .unorder{
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .s ul{
+    margin: 0px;
+    padding: 0px;
+   
+  }
+  .order{
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+.about section{
+    font-size: 12px;
+    /* width: 350px; */
+   }
+}
+/* Responsive Exercise */
+.cardio ul{
+  margin: auto;
+}
+/* responsive contact page */
+.form h1{
+  font-size: 25px;
+}
+.form h2{
+  font-size: 20px;
+}
+#name{
+  width: auto;
+}
+.message{
+  width: auto;
+  
+}
+.icon{
+  flex-direction: column;
+}
+.icon h2{
+  font-size: 17px;
+  margin-top: 4px;
+}
+.fa-facebook{
+  padding: 6px;
+    margin: 6px 2px;
+    font-size: 50px;
+    border-radius: 39px;
+}
+.fa-instagram{
+  padding: 6px;
+    margin: 6px 2px;
+    font-size: 50px;
+    border-radius: 39px;
+}
+}
+
+
+/* For android phone */
+@media(max-width:460px){
+  /* responsive calculator */
+.bmri h1{
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+
+}
+#selectedTable {
+    font-size: 12px;
+    width: 30%;
+  }
+.bmi{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.bmr{
+  width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.fat{
+  width: 80%;
+  margin: auto;
+}
+.foot {
+  font-size: 12px;
+}
+#fa {
+  width: 80%;
+  height: 20px;
+}
+#fw {
+  width: 80%;
+  height: 20px;
+}
+#fbmi{
+  width: 80%;
+  height: 20px;
+}
+/* responsive diet plan */
+/* .tab{
+  width: 50%;
+  border-radius: 20px;
+} */
+/* #dietTable{
+  width: 50%;
+} */
+#title{
+  font-size: 9px;
+ }
+ .diet {
+  font-size: 9px;
+ }
+ /* responsive contact page */
+ .icon h2{
+  font-size: 19px;
+  margin-top: 4px;
+}
+.fa-facebook{
+ padding: 8px;
+ margin: 7px 5px;
+}
+.fa-instagram{
+ padding: 8px;
+ margin: 7px 5px;
+}
+/*  responsive exercise*/
+#photo{
+  width: 130px;
+}
+.cardio ul li{
+  font-size: 16px;
+ }
+ .cardio h1{
+   font-size: 20px;
+ }
+ .about section{
+    font-size: 11px;
+   }
+   #dietTable{
+    width: 200px;
+    font-size: 9px;
+   }
+}
+/* smart phones,protrait iphone,protrait(480X32) android phones */
+@media(max-width:310px){
+  .foot {
+    font-size: 17px;
+  }
+  .about section h1{
+    font-size: 20px;
+  }
+#selectedTable {
+    font-size: 9px;
+    width: 30%;
+  }
+  /* calculator */
+  .bmi{
+    font-size: 12px;
+  }
+  .bmr{
+    font-size: 12px;
+  }
+  .fat{
+    font-size: 12px;
+  }
+  .gender{
+    font-size: 17px;
+  }
+  .tabf{
+    font-size: 17px;
+  }
+  .bmri h1{
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+  }
+  .bmib {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px;
+  }
+  .bmic {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px;
+  }
+  .bmi{
+    font-size: 11px;
+  }
+  .bmr{
+    font-size: 11px;
+  }
+  .fat{
+    font-size: 11px;
+  }
+  /* responsive diet plan */
+/* .tab{
+  width: 40%;
+  border-radius: 20px;
+} */
+/* #dietTable{
+  width: 40%;
+} */
+#title{
+  font-size: 8px;
+ }
+ .diet {
+  font-size: 9px;
+ }
+ /* responsive contact page */
+.form h1{
+  font-size: 20px;
+}
+.form h2{
+  font-size: 17px;
+}
+.icon h2{
+  font-size: 14px;
+  margin-top: 4px;
+}
+.fa-facebook{
+  padding: 4px;
+  width: 43px;
+    margin: 6px 2px;
+    font-size: 40px;
+    border-radius: 39px;
+}
+.fa-instagram{
+  width: 43px;
+  padding: 4px;
+    margin: 6px 2px;
+    font-size: 40px;
+    border-radius: 39px;
+}
+.about section{
+    font-size: 10px;
+   }
+}
+@media(max-width:250px){
+  /* calculator */
+  .bmib {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px;
+  }
+  .bmic {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px;
+  }
+  .bmi input{
+    font-size: 8px;
+  }
+  .bmr input{
+    font-size: 8px;
+  }
+  .fat input{
+    font-size: 8px;
+  }
+  .gender{
+    font-size: 13px;
+  }
+  .bmri h1{
+    font-size: 13px;
+  }
+  .foot {
+    font-size: 10px;
+}
+  #content {
+    width: revert;
+    overflow: visible;
+    font-size: 11px;
+    margin-top: 95px;
+}
+  .photo{
+    width: 4rem;
+    height: 6rem;
+  }
+  .photo:hover{
+    width: 4rem;
+    height: 6rem;
+  }
+  .mix h1{
+    font-size: 14px;
+  }
+  .about section h1{
+    font-size: 15px;
+
+  }
+  .about section{
+    font-size: 9px;
+  }
+/* responsive diet plan */
+#title{
+  font-size: 6px;
+ }
+ .diet {
+  font-size: 6px;
+ }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessIsGame - Contact</title>
+
+    <style>
+      body { 
+        font-family: Arial, sans-serif; 
+        background: #f9f9f9; 
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+   
+
+      .canty { 
+        flex: 1;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        max-width:90%; 
+        margin: 30px auto; 
+        background: #fff; 
+        padding: 10px 20px; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .canty h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input, textarea { 
+        width: 100%; 
+        margin: 10px 0; 
+        padding: 10px; 
+        border-radius: 5px; 
+        border: 1px solid #ccc; 
+        font-size: 14px;
+      }
+
+      input[type="submit"], button { 
+        padding: 10px 20px; 
+        background: #3498db; 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        font-size: 16px;
+        transition: background 0.3s;
+      }
+
+      input[type="submit"]:hover, button:hover { 
+        background: #2980b9; 
+      }
+
+    
+    </style>
+
+    <!-- Scripts -->
+    <script src="fitness.js"></script>
+
+    <!-- Styles -->
+    <style>
+      @import url("web.css");
+      @import url("responsive.css");
+    </style> 
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="nav" class="nav1">
+      <img src="logo1.jpg" alt="sorry" width="135px" height="57px" />
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="bmri.html">CALCULATORS</a></li>
+        <li><a href="exercise.html">EXERCISE</a></li>
+        <li><a href="diet.html">DIET PLAN</a></li>
+        <li><a href="https://fitindiahai.blogspot.com/">BLOG</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="privacy.html">PRIVACY</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="burger" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <div class="canty">
+      <h1>Contact Us</h1>
+
+      <form method="post" action="//submit.form" onSubmit="return validateForm();">
+        <div style="max-width: 400px; font-size: 20px;"></div>
+
+        <div style="padding-bottom: 18px;">
+          Name*<br/>
+          <input type="text" id="data_1" name="data_1" style="max-width: 450px;" class="form-control"/>
+        </div>
+
+        <div style="padding-bottom: 18px;">
+          Email*<br/>
+          <input type="text" id="data_2" name="data_2" style="max-width: 450px;" class="form-control"/>
+        </div>
+
+        <div style="padding-bottom: 18px;">
+          Message<br/>
+          <textarea id="data_3" name="data_3" style="max-width: 450px;" rows="4" class="form-control"></textarea>
+        </div>
+
+        <div style="padding-bottom: 18px;">
+          <input name="skip_Submit" value="Submit" type="submit"/>
+        </div>
+        <script src="https://www.100forms.com/js/FORMKEY:5HN5D5BC5GDR" type="text/javascript"></script>
+      </form>
+
+      <script type="text/javascript">
+        function validateForm() {
+          if (isEmpty(document.getElementById('data_1').value.trim())) {
+            alert('Name is required!');
+            return false;
+          }
+          if (isEmpty(document.getElementById('data_2').value.trim())) {
+            alert('Email is required!');
+            return false;
+          }
+          if (!validateEmail(document.getElementById('data_2').value.trim())) {
+            alert('Email must be a valid email address!');
+            return false;
+          }
+          return true;
+        }
+        function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+        function validateEmail(email) {
+          var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+          return isEmpty(email) || re.test(email);
+        }
+      </script>
+    </div>
+
+    <footer class="foot">
+      Copyright © 2025 FitnessIsGame.Com All rights | reserved.
+    </footer>
+  </body>
+</html>
