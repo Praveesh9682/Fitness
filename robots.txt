@@ -5,4 +5,5 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /tmp/
 
-Sitemap: https://praveeshfitness.vercel.app/sitemap.xml
+Sitemap: https://fitnessisgame.vercel.app/sitemap.xml
+
