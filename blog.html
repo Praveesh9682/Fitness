@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WEGXYGE5BW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WEGXYGE5BW');
-</script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FitnessIsGame - Test</title>
+    <title>FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
+    <meta name="description" content="FitnessIsGame helps you stay fit with workout routines, diet plans, fitness calculators, and health blogs. Improve your lifestyle with our easy-to-follow guides.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitnessisgame.vercel.app/">
+    <meta property="og:title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
+    <meta property="og:description" content="Stay fit with expert workout guides, healthy diet plans, and fitness calculators at FitnessIsGame.">
+    <meta property="og:image" content="https://fitnessisgame.vercel.app/static/logo1.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fitnessisgame.vercel.app/">
+    <meta property="twitter:title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
+    <meta property="twitter:description" content="Stay fit with expert workout guides, healthy diet plans, and fitness calculators at FitnessIsGame.">
+    <meta property="twitter:image" content="https://fitnessisgame.vercel.app/static/logo1.jpg">
 
     <!-- Styles -->
     <style>
       @import url("web.css");
+
+      /* Make iframe responsive */
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        margin-top: 20px;
+      }
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar -->
     <nav id="nav" class="nav1">
-      <img src="../static/logo1.jpg" alt="sorry" width="135px" height="57px" />
+      <img src="../static/logo1.jpg" alt="FitnessIsGame Logo" width="135" height="57" />
       <ul>
         <li><a href="/">HOME</a></li>
         <li><a href="about.html">ABOUT US</a></li>
@@ -31,6 +59,7 @@
         <li><a href="exercise.html">EXERCISE</a></li>
         <li><a href="diet.html">DIET PLAN</a></li>
         <li><a href="https://fitnessisgame.blogspot.com/">BLOG</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
         <li><a href="privacy.html">PRIVACY</a></li>
       </ul>
     </nav>
@@ -39,12 +68,19 @@
       <i class="fa fa-bars">☰</i>
     </a>
 
-    <!-- Page Content -->
+    <!-- Blog Section -->
     <main>
-      hii
+      <h1 style="text-align:center; margin-top:20px;">Welcome to FitnessIsGame</h1>
+      <section>
+        <h2 style="text-align:center; margin-top:20px;">Latest Blog Posts</h2>
+        <div class="iframe-container">
+          <iframe src="https://fitnessisgame.blogspot.com/"></iframe>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="foot"
-
-
+    <footer style="text-align:center; margin:30px 0;">
+      <p>© 2025 FitnessIsGame. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
