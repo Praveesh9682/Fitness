@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WEGXYGE5BW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEGXYGE5BW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WEGXYGE5BW');
+    </script>
 
-  gtag('config', 'G-WEGXYGE5BW');
-</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitnessIsGame - About | Diet, Exercises & Fitness Calculators</title>
@@ -22,8 +22,7 @@
       @import url("web.css");
       @import url("responsive.css");
 
-      
-
+      /* About Page Styles */
       .about h1 {
         color: #222;
         margin-bottom: 15px;
@@ -42,6 +41,29 @@
         color: #00c896;
         font-weight: bold;
       }
+
+      /* Creative Creator Banner */
+      .creator-banner {
+        background: linear-gradient(90deg, #5d5df7, #00c896);
+        color: white;
+        text-align: center;
+        padding: 15px 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin: 15px auto;
+        max-width: 800px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+      }
+      .creator-banner:hover {
+        transform: scale(1.03);
+      }
+      .creator-banner span {
+        color: #f8c146;
+        font-style: italic;
+      }
     </style>
   </head>
   <body>
@@ -54,7 +76,7 @@
         <li><a href="bmri.html">CALCULATORS</a></li>
         <li><a href="exercise.html">EXERCISE</a></li>
         <li><a href="diet.html">DIET PLAN</a></li>
-        <li><a href="https://fitnessisgame.blogspot.com/">BLOG</a></li>
+        <li><a href="blog.html">BLOG</a></li>
         <li><a href="contact.html">CONTACT US</a></li>
         <li><a href="privacy.html">PRIVACY</a></li>
       </ul>
@@ -63,6 +85,11 @@
     <a href="#" class="burger" onclick="myFunction()">
       <i class="fa fa-bars">☰</i>
     </a>
+
+    <!-- Creative Creator Banner -->
+    <div class="creator-banner">
+      ✨ Created & Loved with Passion by <span>Praveesh Shukla</span> 💪
+    </div>
 
     <!-- About Page Content -->
     <div class="about">
@@ -73,25 +100,25 @@
           <b>FitnessIsGame</b> is a comprehensive platform designed for anyone looking to improve their fitness, reduce body fat, build muscle, or maintain a healthy lifestyle. <br>Here, you can:👇<br>
         </p>
        <ol class="order">
-  <li>This website is helpful for everyone seeking fitness guidance.</li>
-  <li>Reduce your body fat percentage effectively.</li>
-  <li>Build and strengthen your muscles naturally.</li>
-  <li>Create a personalized and balanced diet plan using our <strong><a href="diet.html" style="color: black;">Diet Plan</a></strong> section.</li>
-  <li>Follow various exercises and routines available in the <strong><a href="exercise.html" style="color: black;">Exercises</a></strong> section.</li>
-  <li>Check your <strong><a href="bmri.html" style="color: black;">BMR, BMI, and Body Fat %</a></strong> using our interactive calculators.</li>
-  <li>Gain valuable biological knowledge to understand nutrition and fitness better.</li>
-  <li>This website is designed using simple, easy-to-understand English for everyone.</li>
-  <li>Stay motivated with progress tracking ideas and fitness milestones.</li>
-  <li>Get practical nutritional tips for maintaining a healthy lifestyle.</li>
-  <li>Learn how to balance workouts with proper recovery and rest.</li>
-  <li>Discover safe and effective exercise techniques to avoid injuries.</li>
-  <li>Find beginner-friendly fitness routines for those just starting out.</li>
-  <li>Customize workouts according to your strength and stamina level.</li>
-  <li>Improve mental health and focus with fitness-based lifestyle changes.</li>
-  <li>Access easy-to-follow diet recommendations for vegetarians and non-vegetarians.</li>
-  <li>Stay consistent with the help of well-structured fitness guidelines.</li>
-  <li>Promotes overall wellness including diet, exercise, and daily habits.</li>
-</ol>
+         <li>This website is helpful for everyone seeking fitness guidance.</li>
+         <li>Reduce your body fat percentage effectively.</li>
+         <li>Build and strengthen your muscles naturally.</li>
+         <li>Create a personalized and balanced diet plan using our <strong><a href="diet.html" style="color: black;">Diet Plan</a></strong> section.</li>
+         <li>Follow various exercises and routines available in the <strong><a href="exercise.html" style="color: black;">Exercises</a></strong> section.</li>
+         <li>Check your <strong><a href="bmri.html" style="color: black;">BMR, BMI, and Body Fat %</a></strong> using our interactive calculators.</li>
+         <li>Gain valuable biological knowledge to understand nutrition and fitness better.</li>
+         <li>This website is designed using simple, easy-to-understand English for everyone.</li>
+         <li>Stay motivated with progress tracking ideas and fitness milestones.</li>
+         <li>Get practical nutritional tips for maintaining a healthy lifestyle.</li>
+         <li>Learn how to balance workouts with proper recovery and rest.</li>
+         <li>Discover safe and effective exercise techniques to avoid injuries.</li>
+         <li>Find beginner-friendly fitness routines for those just starting out.</li>
+         <li>Customize workouts according to your strength and stamina level.</li>
+         <li>Improve mental health and focus with fitness-based lifestyle changes.</li>
+         <li>Access easy-to-follow diet recommendations for vegetarians and non-vegetarians.</li>
+         <li>Stay consistent with the help of well-structured fitness guidelines.</li>
+         <li>Promotes overall wellness including diet, exercise, and daily habits.</li>
+       </ol>
 
         <h1 style="background-color: rgb(93, 93, 247); border-radius: 12px;" >Advantages of Fitness</h1>
         <ol class="order">
@@ -157,5 +184,3 @@
     <script src="fitness.js"></script>
   </body>
 </html>
-
-
