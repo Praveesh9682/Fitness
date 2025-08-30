@@ -102,7 +102,7 @@ a:hover {
     font-family: 'Baloo Bhai 2', cursive;
     background: center / cover no-repeat url("exer.jpg");
     width:100%;
-    height: 800px;
+    height: 700px;
     margin-top: -21px;
     margin-bottom: -20px;
 }
@@ -110,7 +110,7 @@ a:hover {
     content: "Track and reduce your body fat percentage."; 
     display: flex;
     justify-content: center;
-    margin-left: -117px;
+    margin-left: -160px;
     animation: praveesh infinite 24s; 
 } 
 #content {
@@ -340,5 +340,6 @@ a:hover {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
 
