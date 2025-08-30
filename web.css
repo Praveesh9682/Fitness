@@ -117,7 +117,7 @@ a:hover {
     font-size: 34px;
     width: 841px;
     height: 48px;
-    margin-left: 272px;
+    margin-left: 200px;
     margin-top: 140px;
     position: fixed;
     color: white;
@@ -340,6 +340,7 @@ a:hover {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
 
 
