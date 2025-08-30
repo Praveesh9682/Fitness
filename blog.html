@@ -24,66 +24,175 @@
     <meta property="twitter:image" content="https://fitnessisgame.vercel.app/logo1.jpg">
 
     <!-- Styles -->
-    <style>
-      @import url("web.css");
-       @import url("responsive.css");
-      /* Make iframe responsive */
-      .iframe-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* 16:9 ratio */
-        height: 0;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        margin-top: 20px;
-      }
-      .iframe-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav id="nav" class="nav1">
-      <img src="logo1.jpg" alt="FitnessIsGame Logo" width="135" height="57" />
-      <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
-        <li><a href="bmri.html">CALCULATORS</a></li>
-        <li><a href="exercise.html">EXERCISE</a></li>
-        <li><a href="diet.html">DIET PLAN</a></li>
-        <li><a href="blog.html">BLOG</a></li>
-        <li><a href="contact.html">CONTACT US</a></li>
-        <li><a href="privacy.html">PRIVACY</a></li>
-      </ul>
-    </nav>
+  <style>
+    @import url("web.css");
+    @import url("responsive.css");
 
-    <a href="#" class="burger" onclick="myFunction()">
-      <i class="fa fa-bars">☰</i>
-    </a>
+    /* Blog Section */
+    #blog-posts {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    #blog-posts h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .post-card {
+      display: flex;
+      gap: 15px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .post-card:hover {
+      transform: translateY(-4px);
+    }
+    .post-card img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .post-content {
+      flex: 1;
+    }
+    .post-content h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .post-content h3 a {
+      text-decoration: none;
+      color: #333;
+    }
+    .post-content p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .read-more-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #0077cc;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .read-more-btn:hover {
+      background: #005fa3;
+    }
 
-    <!-- Blog Section -->
-    <main>
-      <h1 style="text-align:center; margin-top:20px;">Welcome to FitnessIsGame</h1>
-      <section>
-        <h2 style="text-align:center; margin-top:20px;">Latest Blog Posts</h2>
-        <div class="iframe-container">
-          <iframe src="https://fitnessisgame.blogspot.com/"></iframe>
-        </div>
-      </section>
-    </main>
+    /* Modal */
+    #postModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      padding: 40px 20px;
+      overflow: auto;
+      z-index: 9999;
+    }
+    #postModal .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: auto;
+    }
+    #postModal .close-btn {
+      float: right;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="nav" class="nav1">
+    <img src="logo1.jpg" alt="sorry" width="135px" height="57px" />
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="bmri.html">CALCULATORS</a></li>
+      <li><a href="exercise.html">EXERCISE</a></li>
+      <li><a href="diet.html">DIET PLAN</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="privacy.html">PRIVACY</a></li>
+    </ul>
+  </nav>
 
-    <footer style="text-align:center; margin:30px 0;">
-      <p>© 2025 FitnessIsGame. All Rights Reserved.</p>
-    </footer>
-  </body>
+  <a href="#" class="burger" onclick="myFunction()">
+    <i class="fa fa-bars">☰</i>
+  </a>
+
+  <!-- Blog Section -->
+  <section id="blog-posts">
+    <h2>Latest Blog Posts</h2>
+    <div id="posts-list"></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="postModal">
+    <div class="modal-content">
+      <div class="close-btn" onclick="document.getElementById('postModal').style.display='none'">✖</div>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Script to fetch blog posts -->
+  <script>
+    function showBlogPosts(json) {
+      const posts = json.feed.entry;
+      const postsList = document.getElementById("posts-list");
+
+      posts.slice(0, 10).forEach((post, i) => {
+        const title = post.title.$t;
+        let thumbnail = "https://via.placeholder.com/120x90?text=No+Image";
+        if (post.media$thumbnail) thumbnail = post.media$thumbnail.url;
+
+        // Short summary
+        let summary = post.summary?.$t || "";
+        summary = summary.replace(/<[^>]+>/g, ""); 
+        if (summary.length > 100) summary = summary.substring(0, 100) + "...";
+
+        // Full content (with HTML)
+        const fullContent = post.content?.$t || "";
+
+        const div = document.createElement("div");
+        div.className = "post-card";
+        div.innerHTML = `
+          <img src="${thumbnail}" alt="Post Thumbnail">
+          <div class="post-content">
+            <h3>${title}</h3>
+            <p>${summary}</p>
+            <a class="read-more-btn" onclick="openPost(${i})">Read More</a>
+          </div>
+        `;
+        postsList.appendChild(div);
+
+        // Save full content
+        window["postContent" + i] = `<h2>${title}</h2>` + fullContent;
+      });
+    }
+
+    function openPost(i) {
+      document.getElementById("modalContent").innerHTML = window["postContent" + i];
+      document.getElementById("postModal").style.display = "block";
+    }
+  </script>
+  <script src="https://fitnessisgame.blogspot.com/feeds/posts/default?alt=json-in-script&callback=showBlogPosts"></script>
+</body>
 </html>
+
 
 
 
