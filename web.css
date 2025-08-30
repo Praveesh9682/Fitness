@@ -176,7 +176,15 @@ span::before {
     display: flex;
     justify-content: center;
 }
-#title { color:blue; font-size: 22px; }
+#title { 
+    background-color: black;
+    color: white;
+    font-size: 22px;
+ }
+#title:hover{
+    background-color: white;
+    color: black;
+}
 .tab {
     display: flex;
     justify-content: center;
@@ -188,26 +196,14 @@ span::before {
     padding: 20px;
     margin: 70px 0px;
 }
-/* #dietTable{
-     display: flex;
-    justify-content: center;
-    flex-direction:column;
-    width:70%;
-    border: 2px solid black;
-    border-radius: 60px;
-    padding: 20px;
-    margin: 70px 0px;
-} */
+
 .below{
      display: flex;
+     align-items: center;
     justify-content: center;
     flex-direction:column;
-    width:80%;
-    padding: 20px;
-    margin: 70px 0px;
-
+    width:100%;
 }
-
 /* BMI, BMR, Fat */
 .gender {
     display: flex;
@@ -344,3 +340,4 @@ span::before {
     flex-direction: column;
     margin-left: 100px;
 }
+
