@@ -106,8 +106,8 @@ a:hover {
     margin-top: -21px;
     margin-bottom: -20px;
 }
-span::before {
-    content: "Here, you can reduce your fat(%)."; 
+#move::before {
+    content: "Track and reduce your body fat percentage."; 
     display: flex;
     justify-content: center;
     margin-left: -117px;
@@ -340,4 +340,5 @@ span::before {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
