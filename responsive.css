@@ -130,7 +130,7 @@ height: 300px;
       font-size: 30px;
       margin:inherit;
     }
-    span::before{
+    #move::before{
       margin-left: -245px;
     }
 /* resposive about us page */ */
@@ -205,7 +205,7 @@ height: 300px;
   #selectedTable {
     width: 40%;
   }
-  span::before{
+  #move::before{
     margin-left: -245px;
   }
   .foot{
@@ -517,3 +517,4 @@ height: 300px;
  }
 
 }
+
