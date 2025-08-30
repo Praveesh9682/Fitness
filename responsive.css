@@ -355,7 +355,7 @@ height: 300px;
     font-size: 11px;
    }
    #dietTable{
-    width: 200px;
+/*     width: 200px; */
     font-size: 9px;
    }
 }
@@ -515,4 +515,5 @@ height: 300px;
  .diet {
   font-size: 6px;
  }
+
 }
