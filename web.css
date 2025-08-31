@@ -115,24 +115,14 @@ a:hover {
 } 
 #content {
     font-size: 34px;
-    width: 841px;
-    height: 48px;
-    margin-left: 290px;
-    margin-top: 140px;
-    position: fixed;
     color: white;
 }
 .mid h1 {
     display: flex;
     justify-content: center;
-    font-size: 55px;
-    margin-top: 57px;
+    font-size: 60px;
     color: white;
-    padding-top: 25px;
-    margin-left: 10px;
     background-color: #020202;
-    border-radius: 50px;
-    width: 900px;
 }
 .mix {
     margin: 21px;
@@ -340,6 +330,7 @@ a:hover {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
 
 
