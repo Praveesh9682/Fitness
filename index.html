@@ -71,9 +71,103 @@
         }
       }
     </script>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Baloo Bhai 2", sans-serif;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      .mid {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("exer.jpg") no-repeat center center/cover;
+        color: white;
+      }
+      .mid h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .mid h3 {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
+
+      /* Services Section */
+      .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 20px;
+        background: #fff;
+      }
+      .service-card {
+        flex: 1 1 250px;
+        max-width: 300px;
+        background: #f1f1f1;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+      .service-card i {
+        font-size: 40px;
+        color: #5d5df7;
+        margin-bottom: 15px;
+      }
+      .service-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+      }
+
+      /* Follow Us + Legal Links */
+      .follow-legal {
+        background: #222;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+      }
+      .follow-legal h2 {
+        margin-bottom: 15px;
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .social-icons a {
+        color: white;
+        font-size: 28px;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #5d5df7;
+      }
+      .legal-links {
+        margin-top: 15px;
+      }
+      .legal-links a {
+        color: #aaa;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .legal-links a:hover {
+        color: #050404;
+      }
+     
+    </style>
   </head>
 
   <body>
+    <!-- NAVBAR (untouched) -->
     <nav id="nav" class="nav1">
       <img src="logo1.jpg" alt="FitnessIsGame Logo" width="135px" height="57px" />
       <ul>
@@ -84,35 +178,65 @@
         <li><a href="diet.html">DIET PLAN</a></li>
         <li><a href="blog.html">BLOG</a></li>
         <li><a href="contact.html">CONTACT US</a></li>
-        <li><a href="privacy.html">PRIVACY</a></li>
       </ul>
     </nav>
 
-    <a href="#" class="burger" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-
-    <!-- content block -->
+    <!-- Hero Section -->
     <section class="mid">
-      <div class="mix">
-        <img class="photo" src="hero.png" alt="Fitness, Workout, and Health" />
-        <h1>
-          Welcome To <b class="fit">FitnessIsGame</b> 
-        </h1><br> <br>
-        <h3 id="content">
+      <h1>Welcome To <b class="fit">FitnessIsGame</b></h1>
+      <h3>Your ultimate destination for fitness, health, and transformation.</h3>
+      <h3 id="content">
           <span id="move"></span>
         </h3>
-        <!-- <a href="bmri.html" class="cta-btn">Try Fitness Calculators</a> -->
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="service-card">
+        <i class="fa fa-calculator"></i>
+        <h3><a href="bmri.html" style="color: black;">Fitness Calculators</a></h3>
+        <p>Check BMI, BMR, body fat %, and track your fitness progress instantly.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-cutlery"></i>
+        <h3><a href="diet.html" style="color: black;">Diet Plans</a></h3>
+        <p>Get customized diet plans designed to help you lose fat and gain muscle.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-heartbeat"></i>
+        <h3><a href="exercise.html" style="color: black;">Workout Routines</a></h3>
+        <p>Explore guided workout plans for strength, endurance, and weight loss.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa fa-pencil"></i>
+        <h3><a href="blog.html" style="color: black;">Fitness Blog</a></h3>
+        <p>Read expert tips, motivation, and fitness trends to stay inspired daily.</p>
       </div>
     </section>
 
-    <!-- foot block -->
+    <!-- Follow Us + Legal Links Section -->
+    <div class="follow-legal">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@fitnessisgame" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="https://www.facebook.com/pratik.shukla.7712" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/shuklapraveesh/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://fitnessisgame.blogspot.com/" target="_blank"><i class="fa fa-pencil"></i></a>
+      </div>
+      <div class="legal-links">
+        <a href="terms.html" >Terms & Conditions</a> |
+        <a href="privacy.html" >Privacy Policy</a> |
+        <a href="disclaimer.html" >Disclaimer</a> |
+        <a href="faq.html" >FAQ</a>
+      </div>
+    </div>
+
+    <!-- FOOTER (untouched) -->
     <footer class="foot">
       Copyright © 2025 FitnessIsGame.Com All rights | reserved.
     </footer>
   </body>
 </html>
-
 
 
 
