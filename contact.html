@@ -14,8 +14,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitnessIsGame - Contact</title>
-
-    <style>
+<style>
       body { 
         font-family: Arial, sans-serif; 
         background: #f9f9f9; 
@@ -26,9 +25,8 @@
         flex-direction: column;
       }
 
-   
-
       .canty { 
+        width: 70%;
         flex: 1;
         display: flex; 
         flex-direction: column; 
@@ -37,41 +35,92 @@
         max-width:90%; 
         margin: 30px auto; 
         background: #fff; 
-        padding: 10px 20px; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 30px; 
+        border-radius: 15px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
       }
 
       .canty h1 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        color: #5d5df7;
+        font-size: 2rem;
+      }
+
+      .intro-text {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
         color: #333;
+        text-align: center;
+        line-height: 1.6;
       }
 
       input, textarea { 
         width: 100%; 
         margin: 10px 0; 
-        padding: 10px; 
-        border-radius: 5px; 
+        padding: 12px; 
+        border-radius: 8px; 
         border: 1px solid #ccc; 
-        font-size: 14px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus, textarea:focus {
+        border-color: #5d5df7;
+        outline: none;
+        box-shadow: 0 0 6px rgba(93,93,247,0.5);
       }
 
       input[type="submit"], button { 
-        padding: 10px 20px; 
-        background: #3498db; 
+        padding: 12px 25px; 
+        background: #5d5df7; 
         color: white; 
         border: none; 
-        border-radius: 5px; 
+        border-radius: 8px; 
         cursor: pointer; 
         font-size: 16px;
+        font-weight: bold;
         transition: background 0.3s;
       }
 
       input[type="submit"]:hover, button:hover { 
-        background: #2980b9; 
+        background: #3c3cc9; 
       }
 
-    
+      #frm{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Contact Info Section */
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+      .info-card {
+        background: #f1f1f1;
+        padding: 20px;
+        border-radius: 12px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+      }
+      .info-card:hover {
+        transform: translateY(-6px);
+      }
+      .info-card i {
+        font-size: 1.8rem;
+        color: #5d5df7;
+        margin-bottom: 10px;
+      }
+      .info-card p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+      }
     </style>
 
     <!-- Scripts -->
@@ -101,7 +150,6 @@
         <li><a href="diet.html">DIET PLAN</a></li>
         <li><a href="blog.html">BLOG</a></li>
         <li><a href="contact.html">CONTACT US</a></li>
-        <li><a href="privacy.html">PRIVACY</a></li>
       </ul>
     </nav>
 
@@ -111,32 +159,48 @@
 
     <div class="canty">
       <h1>Contact Us</h1>
+      <p class="intro-text">
+        You can contact me and appreciate my work. Whatever is running in your mind, just reach out — 
+        I will try my best to respond to you.
+      </p>
 
-      <form method="post" action="//submit.form" onSubmit="return validateForm();">
-        <div style="max-width: 400px; font-size: 20px;"></div>
-
+      <form id="frm" method="post" action="//submit.form" onSubmit="return validateForm();">
         <div style="padding-bottom: 18px;">
           Name*<br/>
-          <input type="text" id="data_1" name="data_1" style="max-width: 450px;" class="form-control"/>
+          <input type="text" id="data_1" name="data_1" class="form-control"/>
         </div>
 
         <div style="padding-bottom: 18px;">
           Email*<br/>
-          <input type="text" id="data_2" name="data_2" style="max-width: 450px;" class="form-control"/>
+          <input type="text" id="data_2" name="data_2" class="form-control"/>
         </div>
 
         <div style="padding-bottom: 18px;">
           Message<br/>
-          <textarea id="data_3" name="data_3" style="max-width: 450px;" rows="4" class="form-control"></textarea>
+          <textarea id="data_3" name="data_3" rows="4" class="form-control"></textarea>
         </div>
 
         <div style="padding-bottom: 18px;">
           <input name="skip_Submit" value="Submit" type="submit"/>
         </div>
-         <a href="https://www.100forms.com" id="lnk100" title="web forms">web forms</a>
+        <a href="https://www.100forms.com" id="lnk100" title="web forms">web forms</a>
         <script src="https://www.100forms.com/js/FORMKEY:5HN5D5BC5GDR" type="text/javascript"></script>
       </form>
 
+      <!-- Contact Info Section -->
+      <div class="contact-info">
+        <div class="info-card">
+          <i class="fa fa-envelope"></i>
+           <p>📧 Email: <a href="mailto:praveeshbkt1999@gmail.com" style="color: black;">support@fitnessisgame.com</a></p>
+          
+        </div>
+        <div class="info-card">
+          <i class="fa fa-map-marker"></i>
+          <h4>Address</h4>
+          <p>Uttar Pradesh, India</p>
+        </div>
+      </div>
+    </div>
       <script type="text/javascript">
         function validateForm() {
           if (isEmpty(document.getElementById('data_1').value.trim())) {
@@ -166,6 +230,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
