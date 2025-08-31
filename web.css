@@ -110,7 +110,6 @@ a:hover {
     content: "Track and reduce your body fat percentage."; 
     display: flex;
     justify-content: center;
-    margin-left: -117px;
     animation: praveesh infinite 24s; 
 } 
 #content {
@@ -122,7 +121,7 @@ a:hover {
     justify-content: center;
     font-size: 60px;
     color: white;
-    width: 60%;
+    width: 100%;
 }
 .mix {
     margin: 21px;
@@ -330,6 +329,7 @@ a:hover {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
 
 
