@@ -38,9 +38,6 @@ margin-top: 10px;
 }
 #content{
   font-size: 27px;
-  width: 100%;
-  height: 28px;
-  margin-top: 120px;
 }
 .mix{
 display: flex;
@@ -126,7 +123,6 @@ height: 300px;
     width: 100%;
     }
     .mid h1{
-      width: 94%;
       font-size: 30px;
       margin:inherit;
     }
@@ -199,8 +195,6 @@ height: 300px;
   #content{
     width: revert;
     overflow: visible;
-  font-size: 15px;
-  margin-top: 153px;
   }
   #selectedTable {
     width: 40%;
@@ -488,7 +482,6 @@ height: 300px;
     width: revert;
     overflow: visible;
     font-size: 11px;
-    margin-top: 95px;
 }
   .photo{
     width: 4rem;
@@ -517,4 +510,5 @@ height: 300px;
  }
 
 }
+
 
