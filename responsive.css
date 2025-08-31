@@ -30,7 +30,7 @@ margin-top: 10px;
   height: 10rem;
 }
 .mix h1{
-  font-size: 1 rem;
+  font-size: 50px;
 }
 #content{
   font-size: 27px;
@@ -180,7 +180,7 @@ height: 300px;
 /* smart phones, android phones,landscape iphone */
 @media(max-width:600px){
   .mix h1{
-    font-size: 1.5 rem;
+    font-size: 35px;
   }
   #content{
     width: revert;
@@ -480,7 +480,7 @@ height: 300px;
     height: 6rem;
   }
   .mix h1{
-    font-size: 0.5 rem;
+    font-size: 15px;
   }
   .about section h1{
     font-size: 15px;
@@ -498,6 +498,7 @@ height: 300px;
  }
 
 }
+
 
 
 
