@@ -285,7 +285,8 @@ height: 300px;
   margin: auto;
 }
 .foot {
-  font-size: 12px;
+  font-size: 15px;
+  
 }
 #fa {
   width: 80%;
@@ -344,8 +345,13 @@ height: 300px;
     font-size: 9px;
    }
    .mid h1{
-    font-size: 25px;
+    font-size: 22px;
   }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 }
 /* smart phones,protrait iphone,protrait(480X32) android phones */
 @media(max-width:310px){
@@ -442,8 +448,16 @@ height: 300px;
     font-size: 10px;
    }
    .mid h1{
-    font-size: 20px;
+    font-size: 17px;
   }
+  .social-icons {
+    display: flex
+;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 }
 @media(max-width:250px){
   /* calculator */
@@ -489,12 +503,20 @@ height: 300px;
     height: 6rem;
   }
   .mid h1{
-    font-size: 15px;
+    font-size: 14px;
   }
   .about section h1{
     font-size: 15px;
 
   }
+  .social-icons {
+    display: flex
+;
+    justify-content: center;
+    flex-direction: column;
+    
+    margin-bottom: 20px;
+}
   .about section{
     font-size: 9px;
   }
@@ -507,6 +529,7 @@ height: 300px;
  }
 
 }
+
 
 
 
