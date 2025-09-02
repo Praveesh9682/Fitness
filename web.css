@@ -101,7 +101,7 @@ a:hover {
 .mid { 
     font-family: 'Baloo Bhai 2', cursive;
     background: center / cover no-repeat url("exer.jpg");
-    width:100%;
+/*     width:100%; */
 /*     height: 700px; */
     margin-top: -21px;
     margin-bottom: -20px;
@@ -329,6 +329,7 @@ a:hover {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
 
 
