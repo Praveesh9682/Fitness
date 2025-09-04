@@ -178,6 +178,7 @@ Create your personalized diet plan by selecting these items, designed according 
       baseData[key] = {
         unit: tds[2].textContent.includes("ml") ? "ml" :
               tds[2].textContent.includes("piece") ? "piece" : "g",
+              tds[2].textContent.includes("Scoop") ? "Scoop" : "g",
         qty: parseFloat(tds[2].textContent), // base qty
         protein: parseFloat(tds[3].textContent),
         fat: parseFloat(tds[4].textContent),
@@ -435,6 +436,7 @@ doc.text(
   
 </body>
 </html>
+
 
 
 
