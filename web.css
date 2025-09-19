@@ -194,12 +194,13 @@ a:hover {
     width:100%;
 }
 /* BMI, BMR, Fat */
-.gender {
+select {
     display: flex;
-    font-size: 22px;
-    margin-left: -1px;
+    font-size: 17px;
+    font-family: 'Baloo Bhai 2', cursive;
+   
 }
-#gender1, #gender2 { margin: 14px; }
+
 .bmri {
     width: 100%;
     background: center / cover no-repeat url("bmri.png");
