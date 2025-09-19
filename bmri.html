@@ -60,6 +60,20 @@
     @import url("responsive.css");
   </style>
 </head>
+<style>
+  .result-box {
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fat-result { background:#ffe6e6; color:#cc0000; }   /* red shade */
+  .status-result { background:#e6ffe6; color:#006600; } /* green shade */
+  .blood-result { background:#e6f0ff; color:#003366; }  /* blue shade */
+  .protein-result { background:#fff0cc; color:#b37400; }/* orange shade */
+  .lean-result { background:#f0e6ff; color:#4b0082; }   /* purple shade */
+</style>
 
   <body>
     <!-- Navbar -->
@@ -96,7 +110,7 @@
           <button class="bmic" type="button" onclick="cbmi()">Clear</button>
         </div>
         <h2>
-          BMI = <b id="bmi_calc"></b> kg/m²
+          <b id="bmi_calc"></b>
         </h2>
         <h3 id="bmi_cal"></h3>
         <h3>Tips:</h3>
@@ -115,48 +129,38 @@
       <div class="bmr">
         <div class="second">
           <h1>Check Your BMR <br>(how much you eat daily)</h1>
+          <select id="gender">
+            Your Gender:
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <input type="text" id="a" placeholder="Enter Your Age" />
           <input type="text" id="bh" placeholder="Enter Your Height (cm)" />
           <input type="text" id="bw" placeholder="Enter Your Weight (kg)" />
-          <input type="text" id="a" placeholder="Enter Your Age" />
         </div>
         <div class="ctn">
           <button class="bmib" type="button" onclick="bmr()">Calculate</button>
           <button class="bmic" type="button" onclick="cbmr()">Clear</button>
         </div>
         <h2>
-          BMR = <b id="bmr_calc"></b> calories. <b id="bmr_cal"></b>
+          BMR = <b id="bmr_calc"></b>  <b id="bmr_cal"></b>
         </h2>
         <h3>Tips:</h3>
-        <ol>
-          <li>
-            If you want to lose extra weight (fat), you have to cut 500 calories
-            from daily calories.
-          </li>
-          <li>
-            If you want to maintain your weight, you have to consume your daily
-            calories.
-          </li>
-          <li>
-            If you want to gain weight, you have to add 500 calories in daily
-            calories.
-          </li>
-          <li>
+          <p>
             500 calories are natural calories to gain/lose weight. These
             calories increase/decrease 1 pound weight in a week.
-          </li>
-        </ol>
+          </p>
+          <a href="diet.html" style="color: rgb(78, 78, 235);">Make Your DIET PLAN</a>
       </div>
 
       <!-- Body Fat Calculator -->
       <div class="fat">
         <h1>Check Your Body Fat %</h1>
-        <div class="gender">
-          Gender
-          <input type="radio" name="gender" id="gender1" value="1" />
-          <label for="gender1">Male</label>
-          <input type="radio" name="gender" id="gender2" value="2" />
-          <label for="gender2">Female</label>
-        </div>
+       
+        <select id="fgender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
         <table class="tabf">
           <tr>
             <td>Age</td>
@@ -165,15 +169,15 @@
             </td>
           </tr>
           <tr>
-            <td>BMI</td>
+            <td>Height(cm)</td>
             <td>
-              <input type="text" id="fbmi" placeholder="Enter Your BMI" />
+              <input type="text" id="fbmi" placeholder="Enter Your Height(cm)" />
             </td>
           </tr>
           <tr>
             <td>Weight (kg)</td>
             <td>
-              <input type="text" id="fw" placeholder="Enter Your Weight" />
+              <input type="text" id="fw" placeholder="Enter Your Weight(kg)" />
             </td>
           </tr>
         </table>
