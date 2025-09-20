@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,16 +23,30 @@
     </style>
     <style>
       #all{
-        /* background-color: white;
-        font-size: 30px;
-        border-radius: 15px;
-        border: 5px solid rebeccapurple;
-        color: black;
-        display: flex;
-        align-content: center;
-        width: auto; */
         color: #8888ff;
       }
+      .exercise-video {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+      }
+      .exercise-video video {
+        max-width: 80%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      }
+      .exercise-heading {
+        text-align: center;
+        font-size: 28px;
+        color: #ffcc00;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        letter-spacing: 1px;
+      }
+
     </style>
 
   </head>
@@ -49,7 +62,6 @@
         <li><a href="diet.html">DIET PLAN</a></li>
         <li><a href="blog.html">BLOG</a></li>
         <li><a href="contact.html">CONTACT US</a></li>
-      
       </ul>
     </nav>
 
@@ -60,13 +72,28 @@
     <!-- Exercise Section -->
     <section class="exercise">
       <div class="cardio">
+        
+
+       <!-- Heading above video -->
+        <h2 class="exercise-heading">🔥 Learn How to Perform Each Exercise 🔥</h2>
+        <div class="exercise-video">
+          <video autoplay loop muted playsinline controls>
+            <source src="all.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <h1 id="all">Best Cardio Exercises to Boost Your Fitness</h1>
         <p style="color: white;">
           Cardio workouts are not just about burning calories – they improve your
           <strong>heart health, stamina, and overall energy levels</strong>. Whether your goal is
           <em>weight loss, fat burning, or building endurance</em>, cardio exercises should be part of your daily routine.
         </p>
-
+        <div class="exercise-video">
+          <video autoplay loop muted playsinline controls>
+            <source src="cardio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <h2 id="all">Why Cardio Matters?</h2>
         <ul>
           <li>Increases your heart rate and improves blood circulation.</li>
@@ -129,8 +156,3 @@
     <script src="fitness.js"></script>
   </body>
 </html>
-
-
-
-
-
