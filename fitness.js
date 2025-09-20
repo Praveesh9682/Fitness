@@ -260,8 +260,8 @@ function fat() {
     // Male Body Fat % Range
     if (fat < 5) status = "Essential Fat";
     else if (fat >= 5 && fat <= 13) status = "Athlete";
-    else if (fat >= 14 && fat <= 17) status = "Fitness";
-    else if (fat >= 18 && fat <= 25) status = "Acceptable";
+    else if (fat > 13 && fat <= 17) status = "Fitness";
+    else if (fat > 17 && fat <= 25) status = "Acceptable";
     else status = "Obese";
 
   } else if (gen == "female") {
@@ -283,8 +283,8 @@ function fat() {
     // Female Body Fat % Range
     if (fat < 10) status = "Essential Fat";
     else if (fat >= 10 && fat <= 20) status = "Athlete";
-    else if (fat >= 21 && fat <= 24) status = "Fitness";
-    else if (fat >= 25 && fat <= 30) status = "Acceptable";
+    else if (fat > 20 && fat <= 24) status = "Fitness";
+    else if (fat > 24 && fat <= 30) status = "Acceptable";
     else status = "Obese";
 
   } else {
@@ -334,4 +334,5 @@ function cfat(){
 //   return false;  
 // }
 // }
+
 
