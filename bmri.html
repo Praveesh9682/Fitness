@@ -14,30 +14,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <title>BMI, BMR, Body Fat & Protein Calculator (KG & CM) | FitnessIsGame</title>
+<title>BMI, BMR & Body Fat Calculator (KG & CM) | FitnessIsGame</title>
 
-<meta name="description" content="Free online BMI, BMR, Body Fat %, Blood Volume & Daily Protein Calculator. Enter your height, weight & age to get instant health insights. No signup needed." />
+<meta name="description" content="Free online BMI, BMR, Body Fat %, Blood Volume & Daily Protein Requirement Calculator. Enter your height, weight & age to get instant fitness results. No signup needed." />
 
 <!-- Open Graph -->
-<meta property="og:title" content="Free BMI, BMR & Body Fat Calculator (KG & CM) | FitnessIsGame" />
-<meta property="og:description" content="Instant BMI, BMR, Body Fat % & Protein Calculator. Accurate health tools designed for weight loss and muscle gain." />
+<meta property="og:title" content="BMI, BMR & Body Fat Calculator | FitnessIsGame" />
+<meta property="og:description" content="Calculate BMI, BMR, Body Fat %, Blood Volume & Daily Protein in one click. Fast & accurate fitness calculator." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://fitnessisgame.com/bmi-bmr-calculator" />
+<meta property="og:url" content="https://fitnessisgame.com/bmri.html" />
 <meta property="og:image" content="https://fitnessisgame.com/assets/fitness-calculator-thumbnail.jpg" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="BMI, BMR & Protein Calculator | FitnessIsGame" />
-<meta name="twitter:description" content="Track BMI, BMR, Body Fat & Required Protein — All in one fitness tool." />
+<meta name="twitter:description" content="Track BMI, BMR, Body Fat & Protein Requirement with our free calculator." />
 <meta name="twitter:image" content="https://fitnessisgame.com/assets/fitness-calculator-thumbnail.jpg" />
 
-<!-- JSON-LD Structured Data (as Calculator instead of App) -->
+<!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "SoftwareApplication",
   "name": "BMI, BMR & Body Fat Calculator",
-  "url": "https://fitnessisgame.com/bmi-bmr-calculator",
+  "url": "https://fitnessisgame.com/bmri.html",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "Web",
   "description": "Instant BMI, BMR, Body Fat %, Blood Volume & Protein Requirement Calculator.",
@@ -47,6 +47,7 @@
   }
 }
 </script>
+
 
   <!-- Scripts -->
   <script src="fitness.js"></script>
@@ -223,6 +224,191 @@
         </table>
       </div>
     </div>
+<!-- ====== FAQ Section (paste this just above your footer) ====== -->
+<section id="fig-faq" style="max-width:980px;margin:40px auto;padding:18px;border-radius:10px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.06);font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial;">
+  <h2 style="margin:0 0 12px 0;font-size:22px;color:#111;font-weight:700;">Frequently Asked Questions — FitnessIsGame Calculator</h2>
+  <p style="margin:0 0 18px 0;color:#444;font-size:14px;">Niche diye gaye sawalon se aapko BMI, BMR, Body Fat aur daily protein calculation samajh mein aa jayega. Har sawal pe click karke jawab dekhein.</p>
+
+  <div role="list" style="display:flex;flex-direction:column;gap:10px;">
+    <!-- FAQ Item 1 -->
+    <div class="faq-item" style="border:1px solid #eef2f6;border-radius:8px;overflow:hidden;">
+      <button aria-expanded="false" aria-controls="faq1" class="faq-btn" style="width:100%;text-align:left;padding:14px 16px;background:#fafafa;border:0;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        BMI kya hota hai aur main iska result kaise samjhun?
+        <span class="faq-icon" aria-hidden="true" style="margin-left:12px;">＋</span>
+      </button>
+      <div id="faq1" role="region" style="padding:14px 16px;display:none;background:#fff;color:#333;font-size:14px;line-height:1.6;">
+        BMI (Body Mass Index) aapka weight (kg) ko height (m²) se divide karke nikalta hai. 
+        <br><br>
+        <strong>Formula:</strong> weight(kg) ÷ (height(m) × height(m))
+        <br><br>
+        <strong>Interpretation (approx):</strong> &lt;18.5 = underweight, 18.5–24.9 = normal, 25–29.9 = overweight, ≥30 = obesity.
+        <br><br>
+        <em>Note:</em> BMI pure indicator hai — muscular logon ka BMI high ho sakta hai par body-fat kam ho.
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item" style="border:1px solid #eef2f6;border-radius:8px;overflow:hidden;">
+      <button aria-expanded="false" aria-controls="faq2" class="faq-btn" style="width:100%;text-align:left;padding:14px 16px;background:#fafafa;border:0;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        BMR kya hai aur kyon important hai?
+        <span class="faq-icon" aria-hidden="true" style="margin-left:12px;">＋</span>
+      </button>
+      <div id="faq2" role="region" style="padding:14px 16px;display:none;background:#fff;color:#333;font-size:14px;line-height:1.6;">
+        BMR (Basal Metabolic Rate) woh calories hain jo aapka sharir resting state mein uses karta hai — yani basic body functions ke liye.
+        <br><br>
+        <strong>Use:</strong> Agar aap weight lose ya gain plan kar rahe ho, to total daily calories nikalne mein BMR base hota hai (BMR × activity factor).
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item" style="border:1px solid #eef2f6;border-radius:8px;overflow:hidden;">
+      <button aria-expanded="false" aria-controls="faq3" class="faq-btn" style="width:100%;text-align:left;padding:14px 16px;background:#fafafa;border:0;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        Body Fat % calculator kitna accurate hota hai?
+        <span class="faq-icon" aria-hidden="true" style="margin-left:12px;">＋</span>
+      </button>
+      <div id="faq3" role="region" style="padding:14px 16px;display:none;background:#fff;color:#333;font-size:14px;line-height:1.6;">
+        Online calculators formula-based approximation dete hain (jaise US Navy, YMCA methods). Ye clinic-level tools (DEXA, hydrostatic) jitne accurate nahi hote.
+        <br><br>
+        <em>Tip:</em> Trend dekhne ke liye same method aur same conditions follow karein — isse aapko progress pata chalega.
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item" style="border:1px solid #eef2f6;border-radius:8px;overflow:hidden;">
+      <button aria-expanded="false" aria-controls="faq4" class="faq-btn" style="width:100%;text-align:left;padding:14px 16px;background:#fafafa;border:0;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        Protein requirement kaise calculate karein?
+        <span class="faq-icon" aria-hidden="true" style="margin-left:12px;">＋</span>
+      </button>
+      <div id="faq4" role="region" style="padding:14px 16px;display:none;background:#fff;color:#333;font-size:14px;line-height:1.6;">
+        Protein requirement aapke goal aur activity pe depend karti hai:
+        <ul style="margin:8px 0 0 18px;padding:0;">
+          <li>Sedentary: 0.8 g/kg body weight</li>
+          <li>Active / Strength training: 1.4–2.0 g/kg</li>
+          <li>Weight loss while preserving muscle: 1.6–2.2 g/kg</li>
+        </ul>
+        Calculator estimated value deta hai; medical condition ho to doctor se consult karein.
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-item" style="border:1px solid #eef2f6;border-radius:8px;overflow:hidden;">
+      <button aria-expanded="false" aria-controls="faq5" class="faq-btn" style="width:100%;text-align:left;padding:14px 16px;background:#fafafa;border:0;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        Main weight kg/cm mein daalun ya lbs/inch? (Units)
+        <span class="faq-icon" aria-hidden="true" style="margin-left:12px;">＋</span>
+      </button>
+      <div id="faq5" role="region" style="padding:14px 16px;display:none;background:#fff;color:#333;font-size:14px;line-height:1.6;">
+        Aap dono options de sakte hain. Hamara calculator kg/cm ko primary maante hue bhi conversions ka option de sakta hai. India ke users ke liye kg/cm recommended hai.
+      </div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+    <div class="faq-item" style="border:1px solid #eef2f6;border-radius:8px;overflow:hidden;">
+      <button aria-expanded="false" aria-controls="faq6" class="faq-btn" style="width:100%;text-align:left;padding:14px 16px;background:#fafafa;border:0;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        Calculator results share kaise karun? (Social preview)
+        <span class="faq-icon" aria-hidden="true" style="margin-left:12px;">＋</span>
+      </button>
+      <div id="faq6" role="region" style="padding:14px 16px;display:none;background:#fff;color:#333;font-size:14px;line-height:1.6;">
+        Jab aap page share karenge to OG tags (og:title, og:description, og:image) social preview control karenge. Make sure <code>og:url</code> aur <code>og:image</code> correct hain (aapne pehle update kar liya tha).
+      </div>
+    </div>
+  </div>
+
+  <p style="margin:16px 0 0 0;color:#666;font-size:13px;">Agar aap chahen to main in FAQs ko Hindi ↔ English dono version mein de du ya aur 5 questions add kar du — reply karein: <strong>"Add more FAQs"</strong></p>
+</section>
+
+<!-- Inline JS for accordion behavior -->
+<script>
+(function(){
+  var buttons = document.querySelectorAll('#fig-faq .faq-btn');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      // close all items (optional: single-open behavior)
+      buttons.forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        var region = document.getElementById(b.getAttribute('aria-controls'));
+        if(region) region.style.display = 'none';
+        var icon = b.querySelector('.faq-icon');
+        if(icon) icon.textContent = '＋';
+      });
+      if(!expanded){
+        btn.setAttribute('aria-expanded','true');
+        var id = btn.getAttribute('aria-controls');
+        var panel = document.getElementById(id);
+        if(panel) panel.style.display = 'block';
+        var icon = btn.querySelector('.faq-icon');
+        if(icon) icon.textContent = '−';
+      } else {
+        btn.setAttribute('aria-expanded','false');
+        var id2 = btn.getAttribute('aria-controls');
+        var panel2 = document.getElementById(id2);
+        if(panel2) panel2.style.display = 'none';
+        var icon2 = btn.querySelector('.faq-icon');
+        if(icon2) icon2.textContent = '＋';
+      }
+    });
+  });
+})();
+</script>
+
+<!-- FAQ Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "BMI kya hota hai aur main iska result kaise samjhun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI (Body Mass Index) weight(kg) ÷ (height(m) × height(m)). Interpretation: <18.5 underweight, 18.5–24.9 normal, 25–29.9 overweight, ≥30 obesity. Note: Muscular logon ka BMI high ho sakta hai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "BMR kya hai aur kyon important hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMR Basal Metabolic Rate hai — calories jo body resting state mein use karti hai. Ye total daily calorie calculation ka base hai (BMR × activity factor)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Body Fat % calculator kitna accurate hota hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Online calculators formula-based approximation dete hain (ex: US Navy). Clinic-level tests (DEXA) zyada accurate hote hain. Trend ke liye same method use karein."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Protein requirement kaise calculate karein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protein requirement aapke goal pe depend karti hai: Sedentary 0.8 g/kg, Active 1.4–2.0 g/kg, Weight-loss preserving muscle 1.6–2.2 g/kg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Main weight kg/cm mein daalun ya lbs/inch? (Units)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Donon options dena best hai. India ke liye kg/cm recommended. Calculator conversions provide kare to global users comfortable rahenge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Calculator results share kaise karun? (Social preview)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OG tags (og:title, og:description, og:image) social preview control karte hain. Ensure og:url aur og:image correct hon."
+      }
+    }
+  ]
+}
+</script>
+<!-- ====== End FAQ Section ====== -->
 
     <!-- Footer -->
     <footer class="foot">
@@ -231,6 +417,7 @@
     <script src="fitness.js"></script>
   </body>
 </html>
+
 
 
 
