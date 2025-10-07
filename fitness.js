@@ -315,8 +315,7 @@ function fat() {
 
 
 function cfat(){
-  document.getElementById("gender1").checked=false;
-  document.getElementById("gender2").checked=false;
+ 
   document.getElementById("fa").value='';
   document.getElementById("fw").value='';
   document.getElementById("fbmi").value='';
@@ -334,5 +333,6 @@ function cfat(){
 //   return false;  
 // }
 // }
+
 
 
