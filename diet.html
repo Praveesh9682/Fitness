@@ -180,7 +180,22 @@ Create your personalized diet plan by selecting these items, designed according 
     <tr data-food="sweetpotato"><td>24</td><td>Sweet Potato</td><td>100</td><td>2</td><td>0</td><td>24</td><td>104</td></tr>
     <tr data-food="broccoli"><td>25</td><td>Broccoli</td><td>100</td><td>3</td><td>0</td><td>7</td><td>40</td></tr>
     <tr data-food="peas"><td>26</td><td>Green Peas</td><td>100</td><td>5</td><td>0</td><td>14</td><td>81</td></tr>
-  </table>
+  <!-- 14 new protein & health-rich items -->
+  <tr data-food="pumpkinseeds"><td>27</td><td>Pumpkin Seeds</td><td>30</td><td>9</td><td>13</td><td>5</td><td>180</td><td>Zinc, Magnesium, Iron</td></tr>
+  <tr data-food="cashews"><td>28</td><td>Cashews</td><td>30</td><td>5</td><td>12</td><td>9</td><td>155</td><td>Magnesium, Iron, Copper</td></tr>
+  <tr data-food="flaxseeds"><td>29</td><td>Flax Seeds</td><td>20</td><td>4</td><td>9</td><td>8</td><td>110</td><td>Omega-3, Fiber, Lignans</td></tr>
+  <tr data-food="sunflowerseeds"><td>30</td><td>Sunflower Seeds</td><td>30</td><td>6</td><td>14</td><td>7</td><td>165</td><td>Vitamin E, Selenium, Magnesium</td></tr>
+  <tr data-food="kidneybeans"><td>31</td><td>Kidney Beans (Rajma)</td><td>100</td><td>9</td><td>0.5</td><td>23</td><td>127</td><td>Iron, Folate, Potassium</td></tr>
+  <tr data-food="lentils"><td>32</td><td>Lentils (Masoor)</td><td>100</td><td>9</td><td>0.4</td><td>20</td><td>116</td><td>Iron, Folate, Fiber</td></tr>
+  <tr data-food="quinoa"><td>33</td><td>Quinoa</td><td>100</td><td>4</td><td>2</td><td>21</td><td>120</td><td>Magnesium, Manganese, Fiber</td></tr>
+  <tr data-food="mushrooms"><td>34</td><td>Mushrooms</td><td>100</td><td>3</td><td>0.3</td><td>3</td><td>22</td><td>Vitamin D, Selenium, Potassium</td></tr>
+  <tr data-food="spinach"><td>35</td><td>Spinach</td><td>100</td><td>3</td><td>0.4</td><td>4</td><td>23</td><td>Iron, Vitamin K, Folate</td></tr>
+  <tr data-food="avocado"><td>36</td><td>Avocado</td><td>100</td><td>2</td><td>15</td><td>9</td><td>160</td><td>Potassium, Vitamin E, Fiber</td></tr>
+  <tr data-food="soyamilk"><td>37</td><td>Soya Milk</td><td>250 (ml)</td><td>7</td><td>4</td><td>6</td><td>95</td><td>Calcium, Vitamin B12</td></tr>
+  <tr data-food="cottagecheese"><td>38</td><td>Cottage Cheese (low-fat)</td><td>100</td><td>11</td><td>4</td><td>3</td><td>98</td><td>Calcium, B12, Phosphorus</td></tr>
+  <tr data-food="beetroot"><td>39</td><td>Beetroot</td><td>100</td><td>2</td><td>0.2</td><td>10</td><td>43</td><td>Folate, Nitrates, Manganese</td></tr>
+  <tr data-food="oranges"><td>40</td><td>Orange</td><td>130</td><td>1</td><td>0.2</td><td>12</td><td>62</td><td>Vitamin C, Folate, Fiber</td></tr>
+</table>
 </section>
 
   <section class="below">
@@ -593,6 +608,128 @@ doc.text(
   ]
 }
 </script>
+  <style>
+  /* === Diet Knowledge Content Styling === */
+  .diet-info {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    line-height: 1.7;
+  }
+  .diet-info h2 {
+    color: #2a7f62;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .diet-info h3 {
+    color: #2e8b57;
+    margin-top: 25px;
+    font-size: 22px;
+  }
+  .diet-info p {
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .diet-info ul {
+    margin: 10px 0 15px 20px;
+  }
+  .diet-info ul li {
+    margin-bottom: 6px;
+  }
+  .diet-info .tip-box {
+    background: #f4fff7;
+    border-left: 4px solid #2e8b57;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+  }
+  .diet-info strong {
+    color: #1e6f5c;
+  }
+</style>
+
+<section class="diet-info">
+  <h2>Understanding Your Diet and Nutrition</h2>
+  <p>
+    A balanced diet is not about strict limitations or depriving yourself of your favorite foods. 
+    It’s about eating smartly — choosing foods that give your body the right nutrients and energy 
+    to perform daily tasks efficiently. Whether your goal is to build muscle, lose fat, or stay fit, 
+    understanding how your diet works is the foundation of every fitness journey.
+  </p>
+
+  <h3>1. The Role of Calories</h3>
+  <p>
+    Every food you eat provides energy measured in <strong>calories</strong>. 
+    Your body burns these calories for basic functions like breathing, movement, and digestion. 
+    If you eat more calories than you burn, you gain weight; if you eat fewer, you lose weight. 
+    A smart diet plan calculates your calorie needs based on your age, height, weight, and activity level.
+  </p>
+
+  <h3>2. Macronutrients: Protein, Carbs & Fats</h3>
+  <p>
+    There are three main macronutrients — <strong>Protein</strong>, <strong>Carbohydrates</strong>, and <strong>Fats</strong>. 
+    Each plays a different but important role:
+  </p>
+  <ul>
+    <li><strong>Protein:</strong> Helps in muscle repair, growth, and hormone production. Good sources include paneer, soya chunks, milk, lentils, and tofu.</li>
+    <li><strong>Carbohydrates:</strong> The main energy source for your body. Choose complex carbs like brown rice, oats, wheat chapati, and fruits.</li>
+    <li><strong>Healthy Fats:</strong> Essential for brain health and hormone balance. Use ghee, olive oil, nuts, and seeds in moderation.</li>
+  </ul>
+
+  <h3>3. Micronutrients and Hydration</h3>
+  <p>
+    Vitamins and minerals — often ignored — support your immune system, metabolism, and cell function. 
+    Add colorful vegetables, fruits, and whole grains to ensure you get enough micronutrients. 
+    Also, drink at least 3 to 4 liters of water daily to stay hydrated and support digestion.
+  </p>
+
+  <h3>4. Vegetarian Diet for Gym Enthusiasts</h3>
+  <p>
+    If you follow a vegetarian diet, building muscle is still absolutely possible. 
+    Focus on combining protein-rich foods like <strong>soya chunks, dal, paneer, chickpeas, and peanuts</strong>. 
+    Include curd and milk to improve protein absorption. A mix of rice and dal or chapati and curd provides a 
+    complete amino acid profile for muscle recovery.
+  </p>
+
+  <h3>5. Timing and Meal Frequency</h3>
+  <p>
+    Eating every 3–4 hours maintains steady energy levels. 
+    A sample structure might include breakfast, mid-morning snack, lunch, evening snack, and dinner. 
+    Post-workout meals should include both protein and carbs — for example, milk with banana or paneer sandwich.
+  </p>
+
+  <h3>6. Cheat Meals and Consistency</h3>
+  <p>
+    Having a cheat meal once a week is fine as long as you stay consistent the rest of the time. 
+    Consistency is far more important than perfection. Small, disciplined habits like avoiding junk food, 
+    getting 7–8 hours of sleep, and drinking enough water make a big difference over time.
+  </p>
+
+  <div class="tip-box">
+    💡 <strong>FitnessIsGame Tip:</strong> 
+    Always track your daily calories and macros. Once you know your body’s needs, 
+    your diet becomes your strongest fitness weapon. 
+    Use the <strong>Custom Diet Plan Generator</strong> below to automatically calculate 
+    the best food combinations for your goal!
+  </div>
+
+  <h3>7. Final Thoughts</h3>
+  <p>
+    Remember, fitness starts in the kitchen. Even the best workout routine cannot outdo a poor diet. 
+    Eat natural, whole foods as much as possible, stay away from processed snacks, 
+    and listen to your body. If you feel tired or low on energy, 
+    adjust your macros instead of cutting calories blindly.  
+    A well-balanced, nutrient-rich diet is the ultimate key to long-term health and performance.
+  </p>
+</section>
+
 <!-- ====== End Diet FAQ Section ====== -->
 <!-- Footer -->
     <footer class="foot">
@@ -600,6 +737,7 @@ doc.text(
     </footer>
 </body>
 </html>
+
 
 
 
