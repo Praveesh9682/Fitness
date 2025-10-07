@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    { "source": "/home", "destination": "/index.html", "permanent": true },
+    { "source": "/about", "destination": "/about.html", "permanent": true },
+    { "source": "/calculators", "destination": "/bmri.html", "permanent": true },
+    { "source": "/exercise", "destination": "/exercise.html", "permanent": true },
+    { "source": "/diet", "destination": "/diet.html", "permanent": true },
+    { "source": "/blog", "destination": "/blog.html", "permanent": true },
+    { "source": "/contact", "destination": "/contact.html", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
+    { "source": "/terms", "destination": "/terms.html", "permanent": true },
+    { "source": "/disclaimer", "destination": "/disclaimer.html", "permanent": true },
+    { "source": "/faq", "destination": "/faq.html", "permanent": true }
+  ]
+}
