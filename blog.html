@@ -1,159 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610081074268247"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides</title>
 
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
-    <meta name="description" content="FitnessIsGame helps you stay fit with workout routines, diet plans, fitness calculators, and health blogs. Improve your lifestyle with our easy-to-follow guides.">
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
+  <meta name="description" content="FitnessIsGame helps you stay fit with workout routines, diet plans, fitness calculators, and health blogs. Improve your lifestyle with our easy-to-follow guides.">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fitnessisgame.vercel.app/">
-    <meta property="og:title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
-    <meta property="og:description" content="Stay fit with expert workout guides, healthy diet plans, and fitness calculators at FitnessIsGame.">
-    <meta property="og:image" content="https://fitnessisgame.vercel.app/logo1.jpg">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fitnessisgame.com/blog.html">
+  <meta property="og:title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
+  <meta property="og:description" content="Stay fit with expert workout guides, healthy diet plans, and fitness calculators at FitnessIsGame.">
+  <meta property="og:image" content="https://fitnessisgame.com/logo1.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://fitnessisgame.com/blog.html">
+  <meta property="twitter:title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
+  <meta property="twitter:description" content="Stay fit with expert workout guides, healthy diet plans, and fitness calculators at FitnessIsGame.">
+  <meta property="twitter:image" content="https://fitnessisgame.com/logo1.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FitnessIsGame",
+  "url": "https://fitnessisgame.com",
+  "description": "Fitness tips, diet plans, workout routines, and health blogs for a balanced lifestyle.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "FitnessIsGame"
+  }
+}
+</script>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://fitnessisgame.vercel.app/">
-    <meta property="twitter:title" content="FitnessIsGame - Fitness Tips, Diet Plans & Workout Guides">
-    <meta property="twitter:description" content="Stay fit with expert workout guides, healthy diet plans, and fitness calculators at FitnessIsGame.">
-    <meta property="twitter:image" content="https://fitnessisgame.vercel.app/logo1.jpg">
+  <style>
+    @import url("web.css");
+    @import url("responsive.css");
 
-    <!-- Styles -->
-    <style>
-      @import url("web.css");
-      @import url("responsive.css");
+    /* Blog Section */
+    #blog-posts {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    #blog-posts h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .post-card {
+      display: flex;
+      gap: 15px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .post-card:hover {
+      transform: translateY(-4px);
+    }
+    .post-card img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .post-content {
+      flex: 1;
+    }
+    .post-content h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .post-content h3 a {
+      text-decoration: none;
+      color: #333;
+    }
+    .post-content p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .read-more-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #0077cc;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .read-more-btn:hover {
+      background: #005fa3;
+    }
+  /* SEO Article Styling */
+  .seo-article {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Poppins', Arial, sans-serif;
+  }
 
-      /* Blog Section */
-      #blog-posts {
-        max-width: 1000px;
-        margin: 30px auto;
-        padding: 20px;
-      }
-      #blog-posts h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .post-card {
-        display: flex;
-        gap: 15px;
-        background: #fff;
-        border-radius: 12px;
-        padding: 15px;
-        margin-bottom: 20px;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-      }
-      .post-card:hover {
-        transform: translateY(-4px);
-      }
-      .post-card img {
-        width: 120px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-      .post-content {
-        flex: 1;
-      }
-      .post-content h3 {
-        margin: 0 0 8px;
-        font-size: 18px;
-      }
-      .post-content h3 a {
-        text-decoration: none;
-        color: #333;
-      }
-      .post-content p {
-        margin: 0 0 10px;
-        font-size: 14px;
-        color: #555;
-      }
-      .read-more-btn {
-        display: inline-block;
-        padding: 6px 12px;
-        background: #0077cc;
-        color: #fff;
-        border-radius: 6px;
-        font-size: 13px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .read-more-btn:hover {
-        background: #005fa3;
-      }
-    </style>
-  </head>
+  .seo-article h2 {
+    font-size: 2rem;
+    color: #111;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+  }
 
-  <body>
-    <!-- Navbar -->
-    <nav id="nav" class="nav1">
-      <img src="logo1.jpg" alt="sorry" width="135px" height="57px" />
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
-        <li><a href="bmri.html">CALCULATORS</a></li>
-        <li><a href="exercise.html">EXERCISE</a></li>
-        <li><a href="diet.html">DIET PLAN</a></li>
-        <li><a href="blog.html">BLOG</a></li>
-        <li><a href="contact.html">CONTACT US</a></li>
-      </ul>
-    </nav>
+  .seo-article h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #0077cc, #00c6ff);
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
 
-    <a href="#" class="burger" onclick="myFunction()">
-      <i class="fa fa-bars">☰</i>
-    </a>
+  .seo-article h3 {
+    font-size: 1.4rem;
+    color: #0077cc;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
 
-    <!-- Blog Section -->
-    <section id="blog-posts">
-      <h2>Latest Articles from FitnessIsGame Blog</h2>
-      <div id="posts-list"></div>
-    </section>
+  .seo-article p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
 
-    <!-- Script to fetch blog posts -->
-    <script>
-      function showBlogPosts(json) {
-        const posts = json.feed.entry;
-        const postsList = document.getElementById("posts-list");
+  .seo-article ul {
+    margin: 15px 0 25px 25px;
+  }
 
-        posts.slice(0, 10).forEach((post) => {
-          const title = post.title.$t;
-          let thumbnail = "https://via.placeholder.com/120x90?text=No+Image";
-          if (post.media$thumbnail) thumbnail = post.media$thumbnail.url;
+  .seo-article ul li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 20px;
+  }
 
-          // Get post link
-          const linkObj = post.link.find(l => l.rel === "alternate");
-          const postUrl = linkObj ? linkObj.href : "#";
+  .seo-article ul li::before {
+    content: "✔";
+    color: #00b894;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
 
-          // Short summary (1-2 lines)
-          let summary = post.summary?.$t || "";
-          summary = summary.replace(/<[^>]+>/g, "");
-          summary = summary.substring(0, 150) + "...";
+  .seo-article strong {
+    color: #000;
+    font-weight: 600;
+  }
 
-          // Create Card
-          const div = document.createElement("div");
-          div.className = "post-card";
-          div.innerHTML = `
-            <img src="${thumbnail}" alt="Post Thumbnail">
-            <div class="post-content">
-              <h3><a href="${postUrl}" target="_blank">${title}</a></h3>
-              <p>${summary}</p>
-              <a href="${postUrl}" class="read-more-btn" target="_blank">Read Full Blog →</a>
-            </div>
-          `;
-          postsList.appendChild(div);
-        });
-      }
-    </script>
+  .seo-article a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
 
-    <script src="https://fitnessisgame.blogspot.com/feeds/posts/default?alt=json-in-script&callback=showBlogPosts"></script>
-    <script src="fitness.js"></script>
-  </body>
+  .seo-article a:hover {
+    color: #00a8ff;
+    text-decoration: underline;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .seo-article {
+      padding: 25px 18px;
+      margin: 30px 10px;
+    }
+
+    .seo-article h2 {
+      font-size: 1.6rem;
+    }
+
+    .seo-article h3 {
+      font-size: 1.2rem;
+    }
+
+    .seo-article p,
+    .seo-article li {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .seo-article {
+      padding: 20px 15px;
+    }
+
+    .seo-article h2 {
+      font-size: 1.4rem;
+    }
+
+    .seo-article h3 {
+      font-size: 1.1rem;
+    }
+
+    .seo-article p {
+      font-size: 0.9rem;
+    }
+  }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="nav" class="nav1">
+    <img src="logo1.jpg" alt="FitnessIsGame Logo" width="135px" height="57px" />
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="bmri.html">CALCULATORS</a></li>
+      <li><a href="exercise.html">EXERCISE</a></li>
+      <li><a href="diet.html">DIET PLAN</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <a href="#" class="burger" onclick="myFunction()">
+    <i class="fa fa-bars">☰</i>
+  </a>
+
+  <!-- Blog Section -->
+  <section id="blog-posts">
+    <h2>10 Latest Blog Posts from 
+      <a href="https://fitnessisgame.blogspot.com/" style="color:blue;">My Blog Website</a>
+    </h2>
+    <div id="posts-list">Loading latest blogs...</div>
+  </section>
+<!-- 1000+ Word SEO Article -->
+<section class="seo-article" style="max-width: 1000px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+  <h2>Welcome to FitnessIsGame – Your Complete Fitness Partner</h2>
+
+  <p><strong>FitnessIsGame.com</strong> is your go-to platform for everything related to health, workouts, and wellness. We believe that fitness is not a one-time activity but a consistent journey toward self-improvement. Whether you’re trying to build muscle, lose fat, or simply lead a healthier lifestyle, we provide you with the best <strong>fitness tips</strong>, <strong>diet plans</strong>, and <strong>workout guides</strong> that are practical, evidence-based, and beginner-friendly.</p>
+
+  <h3>Why Fitness Matters in Today’s Lifestyle</h3>
+  <p>Modern life often keeps us glued to our desks, leading to poor posture, stress, and unhealthy eating habits. That’s where FitnessIsGame steps in — to help you break free from sedentary routines and rediscover your body’s potential. Our platform encourages you to move more, eat better, and stay mentally strong. We believe fitness is not just about aesthetics; it’s about building strength, energy, and confidence for a better quality of life.</p>
+
+  <h3>Our Mission and Approach</h3>
+  <p>Our mission is simple — to make fitness accessible to everyone, regardless of experience, location, or budget. We focus on easy-to-follow routines that don’t require expensive equipment or gym memberships. From <strong>home workouts</strong> using bodyweight exercises to personalized <strong>diet plans</strong>, our content helps you stay consistent even with a busy schedule. Each article we publish is well-researched and written to provide you with clear, actionable guidance.</p>
+
+  <h3>What You’ll Find on FitnessIsGame</h3>
+  <ul style="display: flex; flex-direction: column;">
+    <li><strong><a href="exercise.html">Workout Guides:</a></strong> Step-by-step exercise routines for beginners and advanced athletes, including strength training, cardio, yoga, and HIIT workouts.</li>
+    <li><strong><a href="diet.html">Diet and Nutrition:</a></strong> Balanced meal plans, vegetarian and vegan diet tips, and easy recipes that support fat loss and muscle gain.</li>
+    <li><strong><a href="bmri.html">Fitness Calculators:</a></strong> Tools like BMI, BMR, calorie, and protein calculators to help you track progress and set realistic goals.</li>
+    <li><strong>Mental Wellness:</strong> Motivation techniques, habit-building tips, and stress-management strategies to stay consistent in your fitness journey.</li>
+    <li><strong>Science-Based Articles:</strong> We back our advice with current research from fitness experts and nutritionists to ensure you get trusted and verified information.</li>
+  </ul>
+
+  <h3>Fitness Made Simple and Sustainable</h3>
+  <p>At FitnessIsGame, we understand that maintaining a healthy routine can be challenging. That’s why our philosophy is built around sustainability. We promote gradual improvement instead of crash diets or extreme workouts. Whether you have 10 minutes a day or a full hour, you can find exercises and nutrition advice that fit your routine and lifestyle.</p>
+
+  <p>We also emphasize the importance of recovery and rest. Many beginners overlook sleep, hydration, and flexibility — key factors that affect long-term fitness success. Through our blogs, we educate readers about balancing intensity with recovery, allowing your body to grow stronger safely and efficiently.</p>
+
+  <h3>Our Unique Features</h3>
+  <p>Unlike many websites that simply republish content, our blogs are crafted with originality and clarity. You’ll find detailed breakdowns of <strong>workout forms</strong>, <strong>meal preparation tips</strong>, and <strong>fitness myths debunked</strong>. We make sure every reader walks away with useful knowledge and practical steps to improve their health.</p>
+
+  <p>In addition, our <a href="https://fitnessisgame.blogspot.com/" target="_blank" style="color:#0077cc; text-decoration:none;">official blog</a> provides more in-depth fitness articles that are automatically updated here for your convenience. You can click on any article below to explore comprehensive guides about building muscle, losing fat, or achieving peak performance naturally.</p>
+
+  <h3>How to Start Your Fitness Journey</h3>
+  <p>If you’re new to fitness, don’t worry — we’ve got you covered. Start with our beginner workout plans that focus on proper form and consistency. Gradually include strength training, flexibility exercises, and cardio. Combine your workouts with a balanced diet rich in protein, complex carbohydrates, and healthy fats. Remember, your fitness goal is not just about reaching a certain weight but about feeling stronger, more energetic, and happier each day.</p>
+
+  <p>Our site also includes <strong>fitness calculators</strong> that help you understand your body metrics. You can calculate your BMI to know if you’re underweight, normal, or overweight; your BMR to estimate daily calorie needs; and your protein requirement for optimal muscle growth. These tools make your fitness tracking scientific and smart.</p>
+
+  <h3>Staying Motivated and Consistent</h3>
+  <p>Motivation is the heart of long-term fitness success. We encourage you to treat your progress as a journey, not a race. Celebrate small victories like doing an extra rep, drinking more water, or skipping junk food for a week. These micro-wins lead to big transformations over time. Our motivational articles and real-life success stories help keep your mindset positive and disciplined.</p>
+
+  <h3>Why Search Engines and Readers Love FitnessIsGame</h3>
+  <p>Our articles are written with both readers and search engines in mind. We use natural keyword placement, simple language, and engaging subheadings so you can easily find what you’re looking for. Whether you search for <em>“home workout without equipment”</em>, <em>“best vegetarian diet plan for muscle gain”</em>, or <em>“how to stay fit at home”</em> — you’ll find relevant and helpful content right here.</p>
+
+  <p>Each page on our website is crafted to deliver value, not just traffic. This user-first approach has helped <strong>FitnessIsGame</strong> become a trusted source of authentic and practical fitness content. Our visitors come back because they find honest advice, updated information, and an easy-to-navigate interface.</p>
+
+  <h3>Explore Our Verified Blog Source</h3>
+  <p>To ensure transparency and freshness, we integrate our latest posts directly from our verified Blogger site — <a href="https://fitnessisgame.blogspot.com/" target="_blank" style="color:#0077cc;">fitnessisgame.blogspot.com</a>. This allows users to explore high-quality blogs while keeping the main content accessible right here on FitnessIsGame.com. All posts you see below are real, relevant, and written by fitness enthusiasts who practice what they preach.</p>
+
+  <h3>Final Words – Let’s Make Fitness Fun</h3>
+  <p>At the end of the day, we want you to see fitness as something enjoyable — not a chore. Every healthy choice you make, from doing your morning stretches to drinking enough water, contributes to your success. With consistency and the right mindset, you’ll not only transform your body but also your lifestyle. And remember — <strong>fitness is not a competition; it’s a game you play with yourself</strong>. That’s why we proudly say — <strong>Fitness Is Game!</strong></p>
+
+  <p>Stay connected, keep learning, and let’s grow stronger together. Explore the latest blogs below for expert-backed fitness advice, trending workout plans, and health motivation that truly lasts.</p>
+</section>
+
+  <!-- Script to Fetch Blog Posts -->
+  <script>
+    function showBlogPosts(json) {
+      const posts = json.feed.entry;
+      const postsList = document.getElementById("posts-list");
+      postsList.innerHTML = "";
+
+      posts.slice(0, 10).forEach((post) => {
+        const title = post.title.$t;
+        const link = post.link.find(l => l.rel === "alternate").href;
+        const thumbnail = post.media$thumbnail
+          ? post.media$thumbnail.url.replace("s72-c", "s200")
+          : "https://fitnessisgame.com/default-thumb.jpg";
+        let summary = post.summary?.$t.replace(/<[^>]*>/g, "") || "";
+        summary = summary.split(" ").slice(0, 25).join(" ") + "...";
+
+        const div = document.createElement("div");
+        div.className = "post-card";
+        div.innerHTML = `
+          <img src="${thumbnail}" alt="Post Thumbnail">
+          <div class="post-content">
+            <h3><a href="${link}" target="_blank">${title}</a></h3>
+            <p>${summary}</p>
+            <a class="read-more-btn" href="${link}" target="_blank">Read More</a>
+          </div>
+        `;
+        postsList.appendChild(div);
+      });
+    }
+  </script>
+
+  <!-- Blogspot Feed JSON -->
+  <script src="https://fitnessisgame.blogspot.com/feeds/posts/default?alt=json-in-script&callback=showBlogPosts"></script>
+
+  <!-- Your existing JS -->
+  <script src="fitness.js"></script>
+  
+  <!-- Footer -->
+    <footer class="foot">
+      <p>Copyright © 2025 FitnessIsGame.Com | All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
-
