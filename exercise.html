@@ -19,37 +19,186 @@
     <meta name="description" content="Discover the best cardio exercises for weight loss, stamina, and overall fitness. Learn how running, cycling, dancing, jump rope, and sports can transform your health.">
     <meta name="keywords" content="Cardio Exercises, Best Cardio for Weight Loss, Running Benefits, Cycling Exercise, Jump Rope, Fitness Routine, Exercises for Beginners">
     <style>
-      
       @import url("web.css");
       @import url("responsive.css");
     </style>
     <style>
-      #all{
-        color: #8888ff;
-      }
-      .exercise-video {
-        display: flex;
-        justify-content: center;
-        margin: 30px 0;
-      }
-      .exercise-video video {
-        max-width: 80%;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      }
-      .exercise-heading {
-        text-align: center;
-        font-size: 28px;
-        color: #ffcc00;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        margin-top: 40px;
-        margin-bottom: 20px;
-        font-weight: bold;
-        font-family: 'Arial', sans-serif;
-        letter-spacing: 1px;
-      }
+  @import url("web.css");
+  @import url("responsive.css");
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-    </style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #0d0d1a, #1a1a2e, #0f3460);
+    color: #fff;
+    scroll-behavior: smooth;
+  }
+
+  #all {
+    color: #00bfff;
+  }
+
+  /* --- Cardio Section --- */
+  .cardio {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px auto;
+    width: 85%;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cardio:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 40px rgba(0, 191, 255, 0.4);
+  }
+
+  .exercise-heading {
+    text-align: center;
+    font-size: 32px;
+    color: #ffcc00;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    margin-bottom: 30px;
+  }
+
+  .exercise-video {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+
+  .exercise-video video {
+    max-width: 85%;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+
+  .exercise-video video:hover {
+    transform: scale(1.02);
+  }
+
+  #photo {
+    max-width: 90%;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  }
+
+  h1, h2, h3 {
+    color: #ffd700;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  }
+
+  p, li {
+    color: #f2f2f2;
+    line-height: 1.8;
+  }
+
+  .cta-box {
+    background: linear-gradient(90deg, #0077ff, #00bfff);
+    border-radius: 12px;
+    padding: 15px;
+    margin: 30px auto;
+    width: fit-content;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+  }
+
+  .cta-box a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* --- Info Section --- */
+  .info-section {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 50px 10%;
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+    animation: fadeIn 1.2s ease;
+  }
+
+  .info-section h2 {
+    text-align: center;
+    color: #00bfff;
+    margin-bottom: 20px;
+  }
+
+  /* --- FAQ Section --- */
+  .faq-section {
+    background: rgba(15, 15, 30, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px 10%;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+  }
+
+  .faq-section h2 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .faq-item {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+  }
+
+  .faq-item h3 {
+    color: #00bfff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .faq-item h3:hover {
+    color: #ffd700;
+  }
+
+  .faq-item p {
+    color: #e0e0e0;
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  /* --- Animation --- */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .cardio, .info-section, .faq-section {
+      width: 90%;
+      padding: 25px;
+      margin: 30px auto;
+    }
+
+    .exercise-heading {
+      font-size: 24px;
+    }
+
+    .exercise-video video {
+      max-width: 100%;
+    }
+  }
+</style>
 
   </head>
   <body>
@@ -75,7 +224,6 @@
     <section class="exercise">
       <div class="cardio">
         
-
        <!-- Heading above video -->
         <h2 class="exercise-heading">🔥 Learn How to Perform Each Exercise 🔥</h2>
         <div class="exercise-video">
@@ -97,7 +245,7 @@
           </video>
         </div>
         <h2 id="all">Why Cardio Matters?</h2>
-        <ul>
+        <ul style="color:white;">
           <li>Increases your heart rate and improves blood circulation.</li>
           <li>Helps in quick weight loss and fat burning.</li>
           <li>Strengthens lungs and boosts stamina.</li>
@@ -107,7 +255,7 @@
         </ul>
 
         <h2 id="all">Top 5 Effective Cardio Exercises</h2>
-        <ol>
+        <ol style="color:white;">
           <li>
             <h3>Running</h3>
             <p>One of the simplest and most effective exercises. Running helps burn fat fast, improves lung capacity, and strengthens your legs.</p>
@@ -151,11 +299,57 @@
       </div>
     </section>
 
+    <!-- 🔥 Added SEO-Informative Section -->
+    <section class="info-section">
+      <h2>How Cardio Exercises Help in Weight Loss and Endurance</h2>
+      <p>
+        Cardio workouts play a major role in achieving a fit and active lifestyle. When performed consistently, these exercises help in burning stored fat and improving overall body composition. Activities like running, cycling, and dancing elevate your heart rate, promoting calorie expenditure even after your workout ends. This post-exercise calorie burn is called the “afterburn effect,” which keeps your metabolism high throughout the day.
+      </p>
+      <p>
+        Beginners should start slow with low-intensity exercises such as brisk walking or cycling and gradually increase intensity. Incorporating variety in your workouts helps prevent boredom and works different muscle groups. You can also mix HIIT (High-Intensity Interval Training) for faster results in less time.
+      </p>
+      <p>
+        Along with exercise, maintaining a proper diet is essential for visible results. Ensure you consume a mix of proteins, healthy fats, and complex carbohydrates to fuel your workouts. Hydration is equally important to maintain energy levels and prevent fatigue during exercise sessions.
+      </p>
+      <p>
+        Regular cardio not only improves physical appearance but also supports mental well-being. It releases endorphins—often called the “happy hormones”—that reduce stress and anxiety. Whether you prefer running outdoors or doing jump rope at home, consistency and patience will help you achieve your fitness goals naturally.
+      </p>
+    </section>
+
+    <!-- 🔹 FAQ Section (6 FAQs above footer) -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions (FAQs)</h2>
+      <div class="faq-item">
+        <h3>1. How often should I do cardio exercises?</h3>
+        <p>At least 4–5 days a week of moderate cardio is ideal for maintaining good heart health and endurance.</p>
+      </div>
+      <div class="faq-item">
+        <h3>2. Which cardio exercise burns the most fat?</h3>
+        <p>Running, jump rope, and HIIT workouts are considered the most effective for fat loss in less time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>3. Can I do cardio on an empty stomach?</h3>
+        <p>Yes, but it depends on your energy levels. Light fasted cardio helps burn stored fat, but avoid intense sessions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>4. Is 20 minutes of cardio enough daily?</h3>
+        <p>Yes, 20–30 minutes of moderate cardio daily can significantly improve stamina and cardiovascular strength.</p>
+      </div>
+      <div class="faq-item">
+        <h3>5. Should I do cardio before or after weight training?</h3>
+        <p>If your main goal is strength, do cardio after weights. If fat loss is the goal, do it before.</p>
+      </div>
+      <div class="faq-item">
+        <h3>6. What should I eat after cardio exercise?</h3>
+        <p>Eat a protein-rich meal like eggs, milk, or paneer along with complex carbs like oats or brown rice to recover faster.</p>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="foot">
       <p>Copyright © 2025 FitnessIsGame.Com | All Rights Reserved.</p>
     </footer>
+
     <script src="fitness.js"></script>
   </body>
 </html>
-
