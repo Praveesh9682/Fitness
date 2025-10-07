@@ -79,14 +79,7 @@ a:hover {
     60%{ color:rgb(91, 91, 243); }
     90%{ color:rgb(253, 243, 105); }
 }
-/* @keyframes praveesh {
-    15%{ content:" Here, you can reduce your fat(%)."; }
-    30%{ content:" Here, You can build your muscle."; }
-    45%{ content:" Here, You can make a good diet plan."; }
-    60%{ content:"Here, you can  do different type of exercises."; }
-    75%{ content:"Here, You can check your BMR , BMI and fat %."; }
-    90%{ content:"Here, You could get some biological knowledge."; }
-} */
+
 @keyframes praveesh {
   0%, 15% { content: "Track and reduce your body fat percentage."; }
   16%, 30% { content: "Build and strengthen your muscles effectively."; }
@@ -249,7 +242,6 @@ select {
 
 /* Exercises */
 .exercise { 
-    background: center / cover no-repeat url("g.jpg");
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -330,6 +322,7 @@ select {
     flex-direction: column;
     margin-left: 100px;
 }
+
 
 
 
